@@ -37,7 +37,7 @@ class AdvancedDumrooNL2SQL:
 
     def __init__(self, db_path: str = None):
         self.db_path = db_path or os.getenv('DATABASE_PATH', 'dumroo_education.db')
-        self.admin_df = pd.read_csv('admin_users.csv')
+        self.admin_df = pd.read_csv('data/admin_users.csv')
 
         # Initialize Gemini
         self.api_key = os.getenv('GEMINI_API_KEY')

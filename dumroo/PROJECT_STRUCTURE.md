@@ -15,12 +15,13 @@ dumroo/
 │
 ├── 📊 Database & Data Files
 │   ├── dumroo_education.db          # Main SQLite database
-│   ├── students.csv                 # Student data export
-│   ├── homework.csv                 # Homework assignments
-│   ├── submissions.csv              # Homework submissions
-│   ├── quizzes.csv                  # Quiz schedules
-│   ├── performance.csv              # Student performance data
-│   └── admin_users.csv              # RBAC user definitions
+│   └── data/                        # CSV data files folder
+│       ├── students.csv             # Student data export
+│       ├── homework.csv             # Homework assignments
+│       ├── submissions.csv          # Homework submissions
+│       ├── quizzes.csv              # Quiz schedules
+│       ├── performance.csv          # Student performance data
+│       └── admin_users.csv          # RBAC user definitions
 │
 ├── 🔧 Data Generation Scripts
 │   ├── script.py                    # Main data generation script
@@ -60,12 +61,7 @@ dumroo/
 
 ## 🚀 Applications
 
-### 1. Basic Streamlit App (`dumroo_streamlit_app.py`)
-- Predefined SQL queries with RBAC filtering
-- User-friendly interface for common administrative tasks
-- Real-time data filtering based on user permissions
-
-### 2. Advanced LangChain App (`dumroo_advanced_app.py`)
+### Advanced LangChain App (`dumroo_advanced_app.py`)
 - Natural Language to SQL conversion using Google Gemini Pro
 - LangChain integration for enhanced query processing
 - Advanced error handling and query optimization
@@ -123,12 +119,9 @@ cp .env.example .env
 # Add your OpenAI API key to .env
 ```
 
-### 3. Run Applications
+### 3. Run Application
 ```bash
-# Basic Streamlit App
-streamlit run dumroo_streamlit_app.py
-
-# Advanced LangChain App
+# Advanced LangChain App with AI Integration
 streamlit run dumroo_advanced_app.py
 ```
 

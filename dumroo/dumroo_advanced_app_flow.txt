@@ -1,0 +1,163 @@
+🤖 DUMROO ADVANCED APP - APPLICATION FLOW DOCUMENTATION
+================================================================
+
+📋 OVERVIEW
+-----------
+The Advanced Dumroo App (dumroo_advanced_app.py) is a sophisticated Natural Language to SQL (NL2SQL) system 
+that uses LangChain and Google Gemini Pro AI to convert natural language questions into SQL queries for 
+educational data analysis with role-based access control.
+
+🏗️ ARCHITECTURE & COMPONENTS
+-----------------------------
+
+1. CORE CLASS: AdvancedDumrooNL2SQL
+   - Main system orchestrator
+   - Handles initialization of AI components
+   - Manages database connections
+   - Implements RBAC (Role-Based Access Control)
+
+2. AI INTEGRATION LAYERS:
+   a) LangChain Integration (Primary Mode)
+      - Uses Google Gemini Pro via LangChain
+      - Advanced SQL query generation
+      - Context-aware processing
+   
+   b) Basic Implementation (Fallback Mode)
+      - Direct Google Generative AI integration
+      - Keyword-based query matching
+      - Template-based responses
+   
+   c) Template-Only Mode (Minimal Mode)
+      - Pre-defined query templates
+      - No AI dependency
+      - Basic functionality only
+
+🔄 APPLICATION FLOW
+-------------------
+
+INITIALIZATION PHASE:
+1. Load environment variables (.env file)
+2. Check for LangChain availability
+3. Initialize appropriate AI mode:
+   - If LangChain available → Setup advanced mode
+   - If only google-generativeai available → Setup basic mode
+   - If neither available → Setup template-only mode
+4. Load admin users from CSV for RBAC
+5. Setup custom educational domain prompts
+
+RUNTIME FLOW:
+1. USER AUTHENTICATION
+   ├── Load available users from admin_users.csv
+   ├── Display user selection dropdown
+   ├── Retrieve user permissions (role, grades, sections, regions)
+   └── Display user info in sidebar
+
+2. QUERY PROCESSING PIPELINE
+   ├── User Input (Natural Language Question)
+   ├── Mode Detection:
+   │   ├── LangChain Mode:
+   │   │   ├── Generate SQL using LangChain + Gemini Pro
+   │   │   ├── Apply custom educational domain prompts
+   │   │   └── Use database schema context
+   │   ├── Basic Mode:
+   │   │   ├── Keyword matching against question
+   │   │   ├── Map to predefined query templates
+   │   │   └── Use basic AI for enhancement (if available)
+   │   └── Template Mode:
+   │       ├── Simple keyword matching
+   │       └── Return predefined queries only
+   ├── RBAC Filter Application:
+   │   ├── Check user permissions
+   │   ├── Apply grade/section/region filters
+   │   └── Modify SQL WHERE clauses
+   ├── Query Execution:
+   │   ├── Connect to SQLite database
+   │   ├── Execute filtered SQL query
+   │   └── Return results as DataFrame
+   └── Result Presentation:
+       ├── Display data table
+       ├── Show generated SQL
+       ├── Provide download option
+       └── Display user context
+
+3. USER INTERFACE COMPONENTS
+   ├── Tab 1: Natural Language Query
+   │   ├── Sample question buttons
+   │   ├── Custom question text area
+   │   ├── Query execution button
+   │   └── Results display area
+   └── Tab 2: Quick Queries
+       ├── Pre-built query buttons
+       ├── Common administrative tasks
+       └── Instant execution
+
+🔧 TECHNICAL FEATURES
+---------------------
+
+NATURAL LANGUAGE PROCESSING:
+- Context-aware date handling (last week, next month, etc.)
+- Educational domain-specific prompts
+- Proper table joins and relationships
+- Performance-optimized query generation
+
+ROLE-BASED ACCESS CONTROL:
+- Super Admin: Full access to all data
+- Grade Coordinator: Access to specific grades only
+- Section Teacher: Access to specific sections only
+- Automatic SQL query filtering based on permissions
+
+AI CAPABILITIES:
+- Google Gemini Pro integration via LangChain
+- Custom prompt templates for educational domain
+- Automatic SQL query optimization
+- Error handling and query validation
+- Fallback mechanisms for different installation levels
+
+DATABASE INTEGRATION:
+- SQLite database connection
+- Pandas DataFrame result processing
+- CSV export functionality
+- Transaction safety
+
+🎯 SUPPORTED QUERY TYPES
+------------------------
+- Student homework submission tracking
+- Performance analysis by grade/subject
+- Attendance monitoring and alerts
+- Quiz scheduling and management
+- Cross-table analytical queries
+- Time-based data filtering
+
+⚙️ CONFIGURATION REQUIREMENTS
+------------------------------
+- GEMINI_API_KEY in environment variables
+- dumroo_education.db SQLite database
+- admin_users.csv for user management
+- Optional: LangChain packages for advanced features
+- Optional: google-generativeai for basic AI features
+
+🔄 ERROR HANDLING & FALLBACKS
+-----------------------------
+1. Missing API Key → Warning display, limited functionality
+2. LangChain unavailable → Fall back to basic implementation
+3. Google AI unavailable → Fall back to template-only mode
+4. Database errors → User-friendly error messages
+5. Permission errors → Access denied messages
+6. Query failures → SQL error reporting
+
+📊 OUTPUT FORMATS
+-----------------
+- Interactive Streamlit data tables
+- CSV download files
+- SQL query display for transparency
+- User context information
+- Success/error status messages
+
+🚀 DEPLOYMENT MODES
+-------------------
+1. FULL MODE: LangChain + Gemini Pro (Advanced NL2SQL)
+2. BASIC MODE: Direct Gemini Pro (Keyword matching + AI)
+3. MINIMAL MODE: Template-only (No AI dependencies)
+
+This architecture ensures the application works across different installation scenarios while providing 
+the best possible user experience based on available components.
