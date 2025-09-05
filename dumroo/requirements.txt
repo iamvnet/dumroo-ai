@@ -1,34 +1,16 @@
-# Dumroo AI Developer Assignment Requirements
-# Core dependencies for natural language to SQL system
-
-# Streamlit for web interface
 streamlit>=1.28.0
-
-# LangChain for NL to SQL
 langchain>=0.0.350
-langchain-openai>=0.0.5
+langchain-google-genai>=1.0.0
 langchain-community>=0.0.10
-
-# Database and data processing
 pandas>=2.0.0
 sqlite3
 sqlalchemy>=2.0.0
-
-# OpenAI API
-openai>=1.0.0
-
-# Additional utilities
+google-generativeai>=0.3.0
 python-dotenv>=1.0.0
 typing-extensions>=4.5.0
-
-# Optional: For enhanced NL2SQL (if using LlamaIndex)
 llama-index>=0.9.0
 llama-index-llms-openai>=0.1.0
-
-# Optional: For advanced text processing
 chromadb>=0.4.0
 tiktoken>=0.5.0
-
-# Development and testing
 pytest>=7.0.0
 black>=23.0.0

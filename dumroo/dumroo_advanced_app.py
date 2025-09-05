@@ -5,6 +5,7 @@ Enhanced implementation with better error handling and agent capabilities
 """
 
 import os
+import sys
 import sqlite3
 import pandas as pd
 from typing import Dict, List, Optional, Any
@@ -19,7 +20,7 @@ load_dotenv()
 try:
     from langchain_community.utilities.sql_database import SQLDatabase
     from langchain.chains import create_sql_query_chain
-    from langchain_openai import ChatOpenAI
+    from langchain_google_genai import ChatGoogleGenerativeAI
     from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
     from langchain.prompts import ChatPromptTemplate, PromptTemplate
     from langchain.schema.runnable import RunnablePassthrough
@@ -27,7 +28,9 @@ try:
     LANGCHAIN_AVAILABLE = True
 except ImportError:
     LANGCHAIN_AVAILABLE = False
-    print("⚠️ LangChain not available. Using basic implementation.")
+    # Only show warning in Streamlit context, not during import
+    if 'streamlit' in sys.modules:
+        st.warning("⚠️ LangChain not available. Using basic implementation.")
 
 class AdvancedDumrooNL2SQL:
     """Advanced Natural Language to SQL system using LangChain"""
@@ -36,25 +39,36 @@ class AdvancedDumrooNL2SQL:
         self.db_path = db_path or os.getenv('DATABASE_PATH', 'dumroo_education.db')
         self.admin_df = pd.read_csv('admin_users.csv')
 
-        # Initialize OpenAI
-        self.api_key = os.getenv('OPENAI_API_KEY')
+        # Initialize Gemini
+        self.api_key = os.getenv('GEMINI_API_KEY')
         if not self.api_key:
-            st.warning("⚠️ OpenAI API key not found. Please set OPENAI_API_KEY in your environment.")
+            st.warning("⚠️ Gemini API key not found. Please set GEMINI_API_KEY in your environment.")
             return
 
         if LANGCHAIN_AVAILABLE:
             self.setup_langchain()
         else:
-            st.error("LangChain not available. Please install required dependencies.")
+            self.setup_basic_implementation()
+            if 'streamlit' in sys.modules:
+                if hasattr(self, 'has_genai') and self.has_genai:
+                    st.info("🔧 Using basic implementation with Google Generative AI. Install LangChain for advanced NL2SQL features.")
+                else:
+                    st.warning("⚠️ Limited functionality: Using template-only mode. Install `google-generativeai` and LangChain packages for full features.")
+                    st.markdown("""
+                    **To enable full functionality, install:**
+                    ```bash
+                    pip install google-generativeai langchain langchain-google-genai langchain-community
+                    ```
+                    """)
 
     def setup_langchain(self):
         """Setup LangChain components"""
         try:
             # Initialize LLM
-            self.llm = ChatOpenAI(
-                model="gpt-3.5-turbo",
+            self.llm = ChatGoogleGenerativeAI(
+                model="gemini-pro",
                 temperature=0,
-                openai_api_key=self.api_key
+                google_api_key=self.api_key
             )
 
             # Setup SQL Database
@@ -74,6 +88,40 @@ class AdvancedDumrooNL2SQL:
         except Exception as e:
             print(f"❌ Error setting up LangChain: {e}")
             raise
+
+    def setup_basic_implementation(self):
+        """Setup basic implementation without LangChain"""
+        try:
+            # Try to initialize basic Gemini client if available
+            try:
+                import google.generativeai as genai
+                genai.configure(api_key=self.api_key)
+                self.basic_model = genai.GenerativeModel('gemini-pro')
+                self.has_genai = True
+                print("✅ Google Generative AI available for basic implementation")
+            except ImportError:
+                self.basic_model = None
+                self.has_genai = False
+                print("ℹ️ Google Generative AI not available - using template-only mode")
+            
+            # Load basic query templates (these work without any AI)
+            self.basic_queries = {
+                "homework": "SELECT DISTINCT s.student_name, s.grade, s.section, h.title as homework_title, h.due_date, h.subject FROM students s JOIN submissions sub ON s.student_id = sub.student_id JOIN homework h ON sub.homework_id = h.homework_id WHERE sub.is_submitted = 0",
+                "performance": "SELECT s.student_name, s.grade, s.section, p.subject, p.assessment_type, p.assessment_date, p.percentage FROM performance p JOIN students s ON p.student_id = s.student_id",
+                "attendance": "SELECT s.student_name, s.grade, s.section, s.attendance_percentage FROM students s WHERE s.attendance_percentage < 80",
+                "quizzes": "SELECT q.quiz_title, q.subject, q.grade, q.section, q.scheduled_date, q.scheduled_time FROM quizzes q"
+            }
+            
+            print("✅ Basic implementation initialized successfully")
+            
+        except Exception as e:
+            print(f"❌ Error setting up basic implementation: {e}")
+            # Don't raise - we can still work with predefined queries
+            self.basic_model = None
+            self.has_genai = False
+            self.basic_queries = {
+                "homework": "SELECT DISTINCT s.student_name, s.grade, s.section, h.title as homework_title, h.due_date, h.subject FROM students s JOIN submissions sub ON s.student_id = sub.student_id JOIN homework h ON sub.homework_id = h.homework_id WHERE sub.is_submitted = 0"
+            }
 
     def setup_custom_prompt(self):
         """Setup domain-specific prompt template"""
@@ -161,52 +209,116 @@ class AdvancedDumrooNL2SQL:
 
     def query_natural_language(self, question: str, username: str = "super_admin") -> Dict:
         """Process natural language query"""
-        if not LANGCHAIN_AVAILABLE or not hasattr(self, 'llm'):
-            return {"error": "LangChain not properly initialized"}
-
         try:
             # Get user permissions
             permissions = self.get_user_permissions(username)
             if not permissions:
                 return {"error": "User not found or access denied"}
 
-            # Generate SQL query using LangChain
-            chain_input = {
-                "question": question,
-                "table_info": self.sql_database.get_table_info()
-            }
-
-            sql_query = self.query_chain.invoke(chain_input)
-
-            # Apply RBAC filters
-            secured_query = self.apply_rbac_filter(sql_query, username)
-
-            # Execute the query
-            result = self.execute_query_tool.invoke(secured_query)
-
-            # Parse result into DataFrame if possible
-            try:
-                conn = sqlite3.connect(self.db_path)
-                result_df = pd.read_sql_query(secured_query, conn)
-                conn.close()
-            except:
-                result_df = pd.DataFrame()  # Empty DataFrame on error
-
-            return {
-                "success": True,
-                "question": question,
-                "sql_query": secured_query,
-                "result": result_df,
-                "raw_result": result,
-                "user": permissions['full_name'],
-                "role": permissions['role']
-            }
+            if LANGCHAIN_AVAILABLE and hasattr(self, 'llm'):
+                return self._query_with_langchain(question, username, permissions)
+            else:
+                return self._query_with_basic_implementation(question, username, permissions)
 
         except Exception as e:
             return {
                 "error": f"Query execution failed: {str(e)}",
                 "question": question
             }
+
+    def _query_with_langchain(self, question: str, username: str, permissions: Dict) -> Dict:
+        """Process query using LangChain"""
+        # Generate SQL query using LangChain
+        chain_input = {
+            "question": question,
+            "table_info": self.sql_database.get_table_info()
+        }
+
+        sql_query = self.query_chain.invoke(chain_input)
+
+        # Apply RBAC filters
+        secured_query = self.apply_rbac_filter(sql_query, username)
+
+        # Execute the query
+        result = self.execute_query_tool.invoke(secured_query)
+
+        # Parse result into DataFrame if possible
+        try:
+            conn = sqlite3.connect(self.db_path)
+            result_df = pd.read_sql_query(secured_query, conn)
+            conn.close()
+        except:
+            result_df = pd.DataFrame()  # Empty DataFrame on error
+
+        return {
+            "success": True,
+            "question": question,
+            "sql_query": secured_query,
+            "result": result_df,
+            "raw_result": result,
+            "user": permissions['full_name'],
+            "role": permissions['role']
+        }
+
+    def _query_with_basic_implementation(self, question: str, username: str, permissions: Dict) -> Dict:
+        """Process query using basic implementation"""
+        # Simple keyword matching for basic queries
+        question_lower = question.lower()
+        
+        # Check if we have the query available
+        if "homework" in question_lower and ("not submitted" in question_lower or "missing" in question_lower):
+            if "homework" in self.basic_queries:
+                sql_query = self.basic_queries["homework"]
+            else:
+                return {"error": "Homework query not available in current mode"}
+        elif "performance" in question_lower or "grade" in question_lower:
+            if "performance" in self.basic_queries:
+                sql_query = self.basic_queries["performance"]
+            else:
+                return {"error": "Performance query not available in current mode"}
+        elif "attendance" in question_lower and "low" in question_lower:
+            if "attendance" in self.basic_queries:
+                sql_query = self.basic_queries["attendance"]
+            else:
+                return {"error": "Attendance query not available in current mode"}
+        elif "quiz" in question_lower or "upcoming" in question_lower:
+            if "quizzes" in self.basic_queries:
+                sql_query = self.basic_queries["quizzes"]
+            else:
+                return {"error": "Quiz query not available in current mode"}
+        else:
+            # Default to homework query if available
+            if "homework" in self.basic_queries:
+                sql_query = self.basic_queries["homework"]
+            else:
+                return {"error": "No matching query template available. Please use the Quick Queries tab for available options."}
+
+        # Apply RBAC filters
+        secured_query = self.apply_rbac_filter(sql_query, username)
+
+        # Execute the query
+        try:
+            conn = sqlite3.connect(self.db_path)
+            result_df = pd.read_sql_query(secured_query, conn)
+            conn.close()
+        except Exception as e:
+            return {"error": f"Database query failed: {str(e)}"}
+
+        # Determine the note based on available features
+        if hasattr(self, 'has_genai') and self.has_genai:
+            note = "Using basic implementation with keyword matching - install LangChain for advanced NL processing"
+        else:
+            note = "Using template-only mode - install google-generativeai and LangChain for full NL processing"
+
+        return {
+            "success": True,
+            "question": question,
+            "sql_query": secured_query,
+            "result": result_df,
+            "user": permissions['full_name'],
+            "role": permissions['role'],
+            "note": note
+        }
 
     def get_sample_questions(self) -> List[str]:
         """Get sample natural language questions"""
@@ -251,6 +363,7 @@ def create_advanced_streamlit_app():
         padding: 1rem;
         border-radius: 5px;
         margin-bottom: 1rem;
+        color: #262730;
     }
     .query-result {
         background: #e8f4fd;
@@ -296,13 +409,21 @@ def create_advanced_streamlit_app():
     if permissions:
         st.sidebar.markdown(f"""
         <div class="user-info">
-        <strong>👤 Current User:</strong> {permissions['full_name']}<br>
-        <strong>🎯 Role:</strong> {permissions['role']}<br>
-        <strong>📚 Grades:</strong> {permissions['assigned_grades']}<br>
-        <strong>🏫 Sections:</strong> {permissions['assigned_sections']}<br>
-        <strong>🌍 Regions:</strong> {permissions['assigned_regions']}
+        <strong style="color: #1f77b4;">👤 Current User:</strong> <span style="color: #262730;">{permissions['full_name']}</span><br>
+        <strong style="color: #1f77b4;">🎯 Role:</strong> <span style="color: #262730;">{permissions['role']}</span><br>
+        <strong style="color: #1f77b4;">📚 Grades:</strong> <span style="color: #262730;">{permissions['assigned_grades']}</span><br>
+        <strong style="color: #1f77b4;">🏫 Sections:</strong> <span style="color: #262730;">{permissions['assigned_sections']}</span><br>
+        <strong style="color: #1f77b4;">🌍 Regions:</strong> <span style="color: #262730;">{permissions['assigned_regions']}</span>
         </div>
         """, unsafe_allow_html=True)
+
+    # Status indicator
+    if LANGCHAIN_AVAILABLE:
+        st.success("🚀 **Advanced Mode**: Full LangChain NL2SQL capabilities enabled")
+    elif hasattr(system, 'has_genai') and system.has_genai:
+        st.info("🔧 **Basic Mode**: Keyword-based query matching with Google AI")
+    else:
+        st.warning("⚠️ **Limited Mode**: Template-only queries available")
 
     # Main interface
     tab1, tab2 = st.tabs(["🔍 Natural Language Query", "📊 Quick Queries"])
