@@ -1,0 +1,587 @@
+homework_id,title,subject,grade,section,assigned_date,due_date,total_marks
+1,Mathematics Assignment 1,Mathematics,Grade 6,A,2025-08-07,2025-08-14,25
+2,Mathematics Assignment 2,Mathematics,Grade 6,A,2025-08-16,2025-08-23,15
+3,Mathematics Assignment 3,Mathematics,Grade 6,A,2025-08-06,2025-08-13,20
+4,Mathematics Assignment 4,Mathematics,Grade 6,A,2025-08-09,2025-08-16,25
+5,Mathematics Assignment 5,Mathematics,Grade 6,A,2025-09-09,2025-09-16,20
+6,Mathematics Assignment 6,Mathematics,Grade 6,A,2025-09-13,2025-09-20,15
+7,Mathematics Assignment 7,Mathematics,Grade 6,A,2025-07-30,2025-08-06,20
+8,Mathematics Assignment 8,Mathematics,Grade 6,A,2025-08-17,2025-08-24,15
+9,Science Assignment 1,Science,Grade 6,A,2025-09-07,2025-09-14,25
+10,Science Assignment 2,Science,Grade 6,A,2025-08-26,2025-09-02,20
+11,Science Assignment 3,Science,Grade 6,A,2025-08-04,2025-08-11,25
+12,Science Assignment 4,Science,Grade 6,A,2025-09-10,2025-09-17,10
+13,Science Assignment 5,Science,Grade 6,A,2025-08-10,2025-08-17,15
+14,Science Assignment 6,Science,Grade 6,A,2025-08-29,2025-09-05,20
+15,English Assignment 1,English,Grade 6,A,2025-07-30,2025-08-06,20
+16,English Assignment 2,English,Grade 6,A,2025-08-23,2025-08-30,15
+17,English Assignment 3,English,Grade 6,A,2025-08-27,2025-09-03,20
+18,English Assignment 4,English,Grade 6,A,2025-08-20,2025-08-27,20
+19,English Assignment 5,English,Grade 6,A,2025-09-05,2025-09-12,10
+20,English Assignment 6,English,Grade 6,A,2025-08-15,2025-08-22,20
+21,Social Studies Assignment 1,Social Studies,Grade 6,A,2025-08-02,2025-08-09,10
+22,Social Studies Assignment 2,Social Studies,Grade 6,A,2025-08-28,2025-09-04,20
+23,Social Studies Assignment 3,Social Studies,Grade 6,A,2025-08-09,2025-08-16,25
+24,Social Studies Assignment 4,Social Studies,Grade 6,A,2025-09-11,2025-09-18,20
+25,Social Studies Assignment 5,Social Studies,Grade 6,A,2025-09-12,2025-09-19,10
+26,Social Studies Assignment 6,Social Studies,Grade 6,A,2025-09-08,2025-09-15,20
+27,Hindi Assignment 1,Hindi,Grade 6,A,2025-09-07,2025-09-14,15
+28,Hindi Assignment 2,Hindi,Grade 6,A,2025-08-13,2025-08-20,15
+29,Hindi Assignment 3,Hindi,Grade 6,A,2025-08-29,2025-09-05,15
+30,Hindi Assignment 4,Hindi,Grade 6,A,2025-08-28,2025-09-04,20
+31,Hindi Assignment 5,Hindi,Grade 6,A,2025-08-25,2025-09-01,25
+32,Hindi Assignment 6,Hindi,Grade 6,A,2025-09-02,2025-09-09,15
+33,Hindi Assignment 7,Hindi,Grade 6,A,2025-08-14,2025-08-21,10
+34,Computer Science Assignment 1,Computer Science,Grade 6,A,2025-09-01,2025-09-08,20
+35,Computer Science Assignment 2,Computer Science,Grade 6,A,2025-08-03,2025-08-10,10
+36,Computer Science Assignment 3,Computer Science,Grade 6,A,2025-08-02,2025-08-09,15
+37,Computer Science Assignment 4,Computer Science,Grade 6,A,2025-09-04,2025-09-11,15
+38,Computer Science Assignment 5,Computer Science,Grade 6,A,2025-08-09,2025-08-16,20
+39,Computer Science Assignment 6,Computer Science,Grade 6,A,2025-09-01,2025-09-08,25
+40,Computer Science Assignment 7,Computer Science,Grade 6,A,2025-08-06,2025-08-13,15
+41,Computer Science Assignment 8,Computer Science,Grade 6,A,2025-09-13,2025-09-20,25
+42,Mathematics Assignment 1,Mathematics,Grade 6,B,2025-08-31,2025-09-07,25
+43,Mathematics Assignment 2,Mathematics,Grade 6,B,2025-08-02,2025-08-09,25
+44,Mathematics Assignment 3,Mathematics,Grade 6,B,2025-08-07,2025-08-14,25
+45,Mathematics Assignment 4,Mathematics,Grade 6,B,2025-08-28,2025-09-04,10
+46,Mathematics Assignment 5,Mathematics,Grade 6,B,2025-09-03,2025-09-10,25
+47,Science Assignment 1,Science,Grade 6,B,2025-07-31,2025-08-07,25
+48,Science Assignment 2,Science,Grade 6,B,2025-08-15,2025-08-22,10
+49,Science Assignment 3,Science,Grade 6,B,2025-08-12,2025-08-19,10
+50,Science Assignment 4,Science,Grade 6,B,2025-08-01,2025-08-08,25
+51,Science Assignment 5,Science,Grade 6,B,2025-08-21,2025-08-28,10
+52,Science Assignment 6,Science,Grade 6,B,2025-09-02,2025-09-09,10
+53,Science Assignment 7,Science,Grade 6,B,2025-08-03,2025-08-10,25
+54,English Assignment 1,English,Grade 6,B,2025-08-17,2025-08-24,25
+55,English Assignment 2,English,Grade 6,B,2025-08-10,2025-08-17,15
+56,English Assignment 3,English,Grade 6,B,2025-09-09,2025-09-16,25
+57,English Assignment 4,English,Grade 6,B,2025-08-22,2025-08-29,25
+58,English Assignment 5,English,Grade 6,B,2025-08-27,2025-09-03,25
+59,Social Studies Assignment 1,Social Studies,Grade 6,B,2025-08-04,2025-08-11,15
+60,Social Studies Assignment 2,Social Studies,Grade 6,B,2025-09-09,2025-09-16,20
+61,Social Studies Assignment 3,Social Studies,Grade 6,B,2025-08-06,2025-08-13,15
+62,Social Studies Assignment 4,Social Studies,Grade 6,B,2025-09-02,2025-09-09,25
+63,Social Studies Assignment 5,Social Studies,Grade 6,B,2025-09-01,2025-09-08,15
+64,Social Studies Assignment 6,Social Studies,Grade 6,B,2025-08-13,2025-08-20,10
+65,Social Studies Assignment 7,Social Studies,Grade 6,B,2025-07-31,2025-08-07,20
+66,Social Studies Assignment 8,Social Studies,Grade 6,B,2025-08-28,2025-09-04,25
+67,Hindi Assignment 1,Hindi,Grade 6,B,2025-08-13,2025-08-20,15
+68,Hindi Assignment 2,Hindi,Grade 6,B,2025-08-28,2025-09-04,20
+69,Hindi Assignment 3,Hindi,Grade 6,B,2025-08-08,2025-08-15,20
+70,Hindi Assignment 4,Hindi,Grade 6,B,2025-08-11,2025-08-18,10
+71,Hindi Assignment 5,Hindi,Grade 6,B,2025-08-01,2025-08-08,25
+72,Hindi Assignment 6,Hindi,Grade 6,B,2025-09-07,2025-09-14,10
+73,Hindi Assignment 7,Hindi,Grade 6,B,2025-08-14,2025-08-21,15
+74,Hindi Assignment 8,Hindi,Grade 6,B,2025-08-03,2025-08-10,10
+75,Computer Science Assignment 1,Computer Science,Grade 6,B,2025-08-27,2025-09-03,10
+76,Computer Science Assignment 2,Computer Science,Grade 6,B,2025-08-14,2025-08-21,10
+77,Computer Science Assignment 3,Computer Science,Grade 6,B,2025-08-24,2025-08-31,25
+78,Computer Science Assignment 4,Computer Science,Grade 6,B,2025-08-13,2025-08-20,15
+79,Computer Science Assignment 5,Computer Science,Grade 6,B,2025-08-02,2025-08-09,15
+80,Mathematics Assignment 1,Mathematics,Grade 6,C,2025-08-13,2025-08-20,20
+81,Mathematics Assignment 2,Mathematics,Grade 6,C,2025-09-04,2025-09-11,20
+82,Mathematics Assignment 3,Mathematics,Grade 6,C,2025-08-14,2025-08-21,20
+83,Mathematics Assignment 4,Mathematics,Grade 6,C,2025-08-08,2025-08-15,15
+84,Mathematics Assignment 5,Mathematics,Grade 6,C,2025-08-25,2025-09-01,20
+85,Mathematics Assignment 6,Mathematics,Grade 6,C,2025-08-16,2025-08-23,10
+86,Mathematics Assignment 7,Mathematics,Grade 6,C,2025-09-03,2025-09-10,15
+87,Science Assignment 1,Science,Grade 6,C,2025-09-03,2025-09-10,25
+88,Science Assignment 2,Science,Grade 6,C,2025-08-02,2025-08-09,20
+89,Science Assignment 3,Science,Grade 6,C,2025-09-09,2025-09-16,25
+90,Science Assignment 4,Science,Grade 6,C,2025-09-01,2025-09-08,20
+91,Science Assignment 5,Science,Grade 6,C,2025-09-12,2025-09-19,25
+92,Science Assignment 6,Science,Grade 6,C,2025-08-25,2025-09-01,15
+93,Science Assignment 7,Science,Grade 6,C,2025-08-18,2025-08-25,25
+94,Science Assignment 8,Science,Grade 6,C,2025-08-10,2025-08-17,25
+95,English Assignment 1,English,Grade 6,C,2025-08-13,2025-08-20,20
+96,English Assignment 2,English,Grade 6,C,2025-09-13,2025-09-20,15
+97,English Assignment 3,English,Grade 6,C,2025-08-28,2025-09-04,10
+98,English Assignment 4,English,Grade 6,C,2025-09-03,2025-09-10,25
+99,English Assignment 5,English,Grade 6,C,2025-08-25,2025-09-01,15
+100,English Assignment 6,English,Grade 6,C,2025-08-23,2025-08-30,15
+101,Social Studies Assignment 1,Social Studies,Grade 6,C,2025-08-12,2025-08-19,20
+102,Social Studies Assignment 2,Social Studies,Grade 6,C,2025-09-09,2025-09-16,10
+103,Social Studies Assignment 3,Social Studies,Grade 6,C,2025-08-27,2025-09-03,20
+104,Social Studies Assignment 4,Social Studies,Grade 6,C,2025-08-04,2025-08-11,15
+105,Social Studies Assignment 5,Social Studies,Grade 6,C,2025-08-02,2025-08-09,20
+106,Social Studies Assignment 6,Social Studies,Grade 6,C,2025-08-23,2025-08-30,10
+107,Social Studies Assignment 7,Social Studies,Grade 6,C,2025-08-03,2025-08-10,15
+108,Hindi Assignment 1,Hindi,Grade 6,C,2025-08-29,2025-09-05,15
+109,Hindi Assignment 2,Hindi,Grade 6,C,2025-08-20,2025-08-27,20
+110,Hindi Assignment 3,Hindi,Grade 6,C,2025-07-30,2025-08-06,15
+111,Hindi Assignment 4,Hindi,Grade 6,C,2025-08-11,2025-08-18,10
+112,Hindi Assignment 5,Hindi,Grade 6,C,2025-08-29,2025-09-05,15
+113,Hindi Assignment 6,Hindi,Grade 6,C,2025-09-12,2025-09-19,15
+114,Computer Science Assignment 1,Computer Science,Grade 6,C,2025-08-14,2025-08-21,20
+115,Computer Science Assignment 2,Computer Science,Grade 6,C,2025-08-17,2025-08-24,25
+116,Computer Science Assignment 3,Computer Science,Grade 6,C,2025-08-28,2025-09-04,20
+117,Computer Science Assignment 4,Computer Science,Grade 6,C,2025-08-18,2025-08-25,20
+118,Computer Science Assignment 5,Computer Science,Grade 6,C,2025-08-22,2025-08-29,25
+119,Computer Science Assignment 6,Computer Science,Grade 6,C,2025-08-28,2025-09-04,10
+120,Computer Science Assignment 7,Computer Science,Grade 6,C,2025-08-29,2025-09-05,20
+121,Computer Science Assignment 8,Computer Science,Grade 6,C,2025-08-12,2025-08-19,20
+122,Mathematics Assignment 1,Mathematics,Grade 7,A,2025-08-25,2025-09-01,10
+123,Mathematics Assignment 2,Mathematics,Grade 7,A,2025-09-04,2025-09-11,15
+124,Mathematics Assignment 3,Mathematics,Grade 7,A,2025-08-08,2025-08-15,10
+125,Mathematics Assignment 4,Mathematics,Grade 7,A,2025-08-15,2025-08-22,25
+126,Mathematics Assignment 5,Mathematics,Grade 7,A,2025-08-17,2025-08-24,15
+127,Mathematics Assignment 6,Mathematics,Grade 7,A,2025-08-11,2025-08-18,20
+128,Mathematics Assignment 7,Mathematics,Grade 7,A,2025-08-13,2025-08-20,25
+129,Science Assignment 1,Science,Grade 7,A,2025-08-30,2025-09-06,20
+130,Science Assignment 2,Science,Grade 7,A,2025-08-15,2025-08-22,25
+131,Science Assignment 3,Science,Grade 7,A,2025-09-09,2025-09-16,25
+132,Science Assignment 4,Science,Grade 7,A,2025-08-28,2025-09-04,15
+133,Science Assignment 5,Science,Grade 7,A,2025-08-21,2025-08-28,15
+134,Science Assignment 6,Science,Grade 7,A,2025-08-07,2025-08-14,25
+135,English Assignment 1,English,Grade 7,A,2025-09-02,2025-09-09,10
+136,English Assignment 2,English,Grade 7,A,2025-09-01,2025-09-08,10
+137,English Assignment 3,English,Grade 7,A,2025-08-03,2025-08-10,10
+138,English Assignment 4,English,Grade 7,A,2025-07-30,2025-08-06,25
+139,English Assignment 5,English,Grade 7,A,2025-08-07,2025-08-14,15
+140,English Assignment 6,English,Grade 7,A,2025-08-03,2025-08-10,15
+141,Social Studies Assignment 1,Social Studies,Grade 7,A,2025-08-12,2025-08-19,25
+142,Social Studies Assignment 2,Social Studies,Grade 7,A,2025-08-22,2025-08-29,10
+143,Social Studies Assignment 3,Social Studies,Grade 7,A,2025-09-07,2025-09-14,25
+144,Social Studies Assignment 4,Social Studies,Grade 7,A,2025-09-10,2025-09-17,25
+145,Social Studies Assignment 5,Social Studies,Grade 7,A,2025-07-31,2025-08-07,10
+146,Hindi Assignment 1,Hindi,Grade 7,A,2025-07-30,2025-08-06,10
+147,Hindi Assignment 2,Hindi,Grade 7,A,2025-09-01,2025-09-08,20
+148,Hindi Assignment 3,Hindi,Grade 7,A,2025-09-02,2025-09-09,20
+149,Hindi Assignment 4,Hindi,Grade 7,A,2025-07-31,2025-08-07,25
+150,Hindi Assignment 5,Hindi,Grade 7,A,2025-08-10,2025-08-17,10
+151,Hindi Assignment 6,Hindi,Grade 7,A,2025-08-05,2025-08-12,15
+152,Hindi Assignment 7,Hindi,Grade 7,A,2025-08-14,2025-08-21,15
+153,Hindi Assignment 8,Hindi,Grade 7,A,2025-09-07,2025-09-14,20
+154,Computer Science Assignment 1,Computer Science,Grade 7,A,2025-08-16,2025-08-23,25
+155,Computer Science Assignment 2,Computer Science,Grade 7,A,2025-08-04,2025-08-11,20
+156,Computer Science Assignment 3,Computer Science,Grade 7,A,2025-08-24,2025-08-31,25
+157,Computer Science Assignment 4,Computer Science,Grade 7,A,2025-09-04,2025-09-11,15
+158,Computer Science Assignment 5,Computer Science,Grade 7,A,2025-09-12,2025-09-19,15
+159,Computer Science Assignment 6,Computer Science,Grade 7,A,2025-08-18,2025-08-25,10
+160,Computer Science Assignment 7,Computer Science,Grade 7,A,2025-09-09,2025-09-16,10
+161,Mathematics Assignment 1,Mathematics,Grade 7,B,2025-08-24,2025-08-31,25
+162,Mathematics Assignment 2,Mathematics,Grade 7,B,2025-08-23,2025-08-30,25
+163,Mathematics Assignment 3,Mathematics,Grade 7,B,2025-08-02,2025-08-09,10
+164,Mathematics Assignment 4,Mathematics,Grade 7,B,2025-09-12,2025-09-19,15
+165,Mathematics Assignment 5,Mathematics,Grade 7,B,2025-08-04,2025-08-11,25
+166,Science Assignment 1,Science,Grade 7,B,2025-09-09,2025-09-16,20
+167,Science Assignment 2,Science,Grade 7,B,2025-09-04,2025-09-11,10
+168,Science Assignment 3,Science,Grade 7,B,2025-09-01,2025-09-08,10
+169,Science Assignment 4,Science,Grade 7,B,2025-08-13,2025-08-20,15
+170,Science Assignment 5,Science,Grade 7,B,2025-09-12,2025-09-19,25
+171,Science Assignment 6,Science,Grade 7,B,2025-08-16,2025-08-23,10
+172,Science Assignment 7,Science,Grade 7,B,2025-08-03,2025-08-10,20
+173,Science Assignment 8,Science,Grade 7,B,2025-09-02,2025-09-09,10
+174,English Assignment 1,English,Grade 7,B,2025-08-19,2025-08-26,10
+175,English Assignment 2,English,Grade 7,B,2025-08-12,2025-08-19,15
+176,English Assignment 3,English,Grade 7,B,2025-09-13,2025-09-20,25
+177,English Assignment 4,English,Grade 7,B,2025-08-03,2025-08-10,20
+178,English Assignment 5,English,Grade 7,B,2025-08-09,2025-08-16,15
+179,English Assignment 6,English,Grade 7,B,2025-09-04,2025-09-11,25
+180,Social Studies Assignment 1,Social Studies,Grade 7,B,2025-08-23,2025-08-30,15
+181,Social Studies Assignment 2,Social Studies,Grade 7,B,2025-09-12,2025-09-19,10
+182,Social Studies Assignment 3,Social Studies,Grade 7,B,2025-08-31,2025-09-07,20
+183,Social Studies Assignment 4,Social Studies,Grade 7,B,2025-08-02,2025-08-09,10
+184,Social Studies Assignment 5,Social Studies,Grade 7,B,2025-08-26,2025-09-02,15
+185,Social Studies Assignment 6,Social Studies,Grade 7,B,2025-08-03,2025-08-10,20
+186,Social Studies Assignment 7,Social Studies,Grade 7,B,2025-09-06,2025-09-13,25
+187,Hindi Assignment 1,Hindi,Grade 7,B,2025-07-31,2025-08-07,20
+188,Hindi Assignment 2,Hindi,Grade 7,B,2025-08-27,2025-09-03,25
+189,Hindi Assignment 3,Hindi,Grade 7,B,2025-08-13,2025-08-20,20
+190,Hindi Assignment 4,Hindi,Grade 7,B,2025-09-03,2025-09-10,25
+191,Hindi Assignment 5,Hindi,Grade 7,B,2025-08-26,2025-09-02,15
+192,Hindi Assignment 6,Hindi,Grade 7,B,2025-09-11,2025-09-18,25
+193,Hindi Assignment 7,Hindi,Grade 7,B,2025-08-04,2025-08-11,20
+194,Computer Science Assignment 1,Computer Science,Grade 7,B,2025-09-13,2025-09-20,10
+195,Computer Science Assignment 2,Computer Science,Grade 7,B,2025-08-04,2025-08-11,20
+196,Computer Science Assignment 3,Computer Science,Grade 7,B,2025-08-08,2025-08-15,25
+197,Computer Science Assignment 4,Computer Science,Grade 7,B,2025-09-13,2025-09-20,15
+198,Computer Science Assignment 5,Computer Science,Grade 7,B,2025-08-23,2025-08-30,20
+199,Computer Science Assignment 6,Computer Science,Grade 7,B,2025-08-22,2025-08-29,10
+200,Mathematics Assignment 1,Mathematics,Grade 7,C,2025-07-30,2025-08-06,20
+201,Mathematics Assignment 2,Mathematics,Grade 7,C,2025-08-27,2025-09-03,20
+202,Mathematics Assignment 3,Mathematics,Grade 7,C,2025-08-16,2025-08-23,10
+203,Mathematics Assignment 4,Mathematics,Grade 7,C,2025-08-07,2025-08-14,10
+204,Mathematics Assignment 5,Mathematics,Grade 7,C,2025-08-10,2025-08-17,25
+205,Science Assignment 1,Science,Grade 7,C,2025-09-03,2025-09-10,25
+206,Science Assignment 2,Science,Grade 7,C,2025-08-05,2025-08-12,10
+207,Science Assignment 3,Science,Grade 7,C,2025-08-04,2025-08-11,20
+208,Science Assignment 4,Science,Grade 7,C,2025-09-03,2025-09-10,10
+209,Science Assignment 5,Science,Grade 7,C,2025-09-06,2025-09-13,20
+210,Science Assignment 6,Science,Grade 7,C,2025-08-23,2025-08-30,10
+211,Science Assignment 7,Science,Grade 7,C,2025-08-17,2025-08-24,25
+212,Science Assignment 8,Science,Grade 7,C,2025-08-23,2025-08-30,10
+213,English Assignment 1,English,Grade 7,C,2025-09-04,2025-09-11,15
+214,English Assignment 2,English,Grade 7,C,2025-09-11,2025-09-18,25
+215,English Assignment 3,English,Grade 7,C,2025-08-09,2025-08-16,15
+216,English Assignment 4,English,Grade 7,C,2025-08-16,2025-08-23,20
+217,English Assignment 5,English,Grade 7,C,2025-08-16,2025-08-23,25
+218,English Assignment 6,English,Grade 7,C,2025-08-08,2025-08-15,10
+219,Social Studies Assignment 1,Social Studies,Grade 7,C,2025-08-26,2025-09-02,20
+220,Social Studies Assignment 2,Social Studies,Grade 7,C,2025-08-25,2025-09-01,20
+221,Social Studies Assignment 3,Social Studies,Grade 7,C,2025-08-29,2025-09-05,10
+222,Social Studies Assignment 4,Social Studies,Grade 7,C,2025-08-22,2025-08-29,20
+223,Social Studies Assignment 5,Social Studies,Grade 7,C,2025-08-14,2025-08-21,25
+224,Social Studies Assignment 6,Social Studies,Grade 7,C,2025-09-06,2025-09-13,15
+225,Hindi Assignment 1,Hindi,Grade 7,C,2025-08-05,2025-08-12,15
+226,Hindi Assignment 2,Hindi,Grade 7,C,2025-08-18,2025-08-25,10
+227,Hindi Assignment 3,Hindi,Grade 7,C,2025-08-24,2025-08-31,20
+228,Hindi Assignment 4,Hindi,Grade 7,C,2025-09-07,2025-09-14,25
+229,Hindi Assignment 5,Hindi,Grade 7,C,2025-08-20,2025-08-27,25
+230,Hindi Assignment 6,Hindi,Grade 7,C,2025-08-20,2025-08-27,25
+231,Hindi Assignment 7,Hindi,Grade 7,C,2025-09-09,2025-09-16,15
+232,Hindi Assignment 8,Hindi,Grade 7,C,2025-08-18,2025-08-25,20
+233,Computer Science Assignment 1,Computer Science,Grade 7,C,2025-08-29,2025-09-05,20
+234,Computer Science Assignment 2,Computer Science,Grade 7,C,2025-08-10,2025-08-17,25
+235,Computer Science Assignment 3,Computer Science,Grade 7,C,2025-08-19,2025-08-26,20
+236,Computer Science Assignment 4,Computer Science,Grade 7,C,2025-09-12,2025-09-19,25
+237,Computer Science Assignment 5,Computer Science,Grade 7,C,2025-09-04,2025-09-11,15
+238,Computer Science Assignment 6,Computer Science,Grade 7,C,2025-08-19,2025-08-26,25
+239,Mathematics Assignment 1,Mathematics,Grade 8,A,2025-08-24,2025-08-31,20
+240,Mathematics Assignment 2,Mathematics,Grade 8,A,2025-08-06,2025-08-13,15
+241,Mathematics Assignment 3,Mathematics,Grade 8,A,2025-09-05,2025-09-12,15
+242,Mathematics Assignment 4,Mathematics,Grade 8,A,2025-09-11,2025-09-18,10
+243,Mathematics Assignment 5,Mathematics,Grade 8,A,2025-08-28,2025-09-04,15
+244,Mathematics Assignment 6,Mathematics,Grade 8,A,2025-08-27,2025-09-03,20
+245,Mathematics Assignment 7,Mathematics,Grade 8,A,2025-09-12,2025-09-19,10
+246,Science Assignment 1,Science,Grade 8,A,2025-09-11,2025-09-18,25
+247,Science Assignment 2,Science,Grade 8,A,2025-08-07,2025-08-14,20
+248,Science Assignment 3,Science,Grade 8,A,2025-08-14,2025-08-21,20
+249,Science Assignment 4,Science,Grade 8,A,2025-09-10,2025-09-17,15
+250,Science Assignment 5,Science,Grade 8,A,2025-09-13,2025-09-20,25
+251,Science Assignment 6,Science,Grade 8,A,2025-08-23,2025-08-30,10
+252,Science Assignment 7,Science,Grade 8,A,2025-08-27,2025-09-03,25
+253,Science Assignment 8,Science,Grade 8,A,2025-09-05,2025-09-12,25
+254,English Assignment 1,English,Grade 8,A,2025-09-02,2025-09-09,10
+255,English Assignment 2,English,Grade 8,A,2025-08-22,2025-08-29,10
+256,English Assignment 3,English,Grade 8,A,2025-08-05,2025-08-12,15
+257,English Assignment 4,English,Grade 8,A,2025-09-10,2025-09-17,20
+258,English Assignment 5,English,Grade 8,A,2025-08-09,2025-08-16,10
+259,English Assignment 6,English,Grade 8,A,2025-09-04,2025-09-11,25
+260,English Assignment 7,English,Grade 8,A,2025-08-20,2025-08-27,25
+261,English Assignment 8,English,Grade 8,A,2025-08-05,2025-08-12,10
+262,Social Studies Assignment 1,Social Studies,Grade 8,A,2025-08-15,2025-08-22,15
+263,Social Studies Assignment 2,Social Studies,Grade 8,A,2025-08-31,2025-09-07,15
+264,Social Studies Assignment 3,Social Studies,Grade 8,A,2025-08-27,2025-09-03,20
+265,Social Studies Assignment 4,Social Studies,Grade 8,A,2025-08-24,2025-08-31,25
+266,Social Studies Assignment 5,Social Studies,Grade 8,A,2025-09-11,2025-09-18,15
+267,Hindi Assignment 1,Hindi,Grade 8,A,2025-07-31,2025-08-07,25
+268,Hindi Assignment 2,Hindi,Grade 8,A,2025-08-05,2025-08-12,20
+269,Hindi Assignment 3,Hindi,Grade 8,A,2025-08-25,2025-09-01,10
+270,Hindi Assignment 4,Hindi,Grade 8,A,2025-08-06,2025-08-13,15
+271,Hindi Assignment 5,Hindi,Grade 8,A,2025-08-21,2025-08-28,20
+272,Hindi Assignment 6,Hindi,Grade 8,A,2025-08-20,2025-08-27,25
+273,Hindi Assignment 7,Hindi,Grade 8,A,2025-08-12,2025-08-19,25
+274,Computer Science Assignment 1,Computer Science,Grade 8,A,2025-08-29,2025-09-05,10
+275,Computer Science Assignment 2,Computer Science,Grade 8,A,2025-08-27,2025-09-03,25
+276,Computer Science Assignment 3,Computer Science,Grade 8,A,2025-08-19,2025-08-26,10
+277,Computer Science Assignment 4,Computer Science,Grade 8,A,2025-08-18,2025-08-25,10
+278,Computer Science Assignment 5,Computer Science,Grade 8,A,2025-09-13,2025-09-20,10
+279,Computer Science Assignment 6,Computer Science,Grade 8,A,2025-07-31,2025-08-07,20
+280,Computer Science Assignment 7,Computer Science,Grade 8,A,2025-09-09,2025-09-16,10
+281,Mathematics Assignment 1,Mathematics,Grade 8,B,2025-08-14,2025-08-21,15
+282,Mathematics Assignment 2,Mathematics,Grade 8,B,2025-09-03,2025-09-10,15
+283,Mathematics Assignment 3,Mathematics,Grade 8,B,2025-08-20,2025-08-27,25
+284,Mathematics Assignment 4,Mathematics,Grade 8,B,2025-08-28,2025-09-04,15
+285,Mathematics Assignment 5,Mathematics,Grade 8,B,2025-08-24,2025-08-31,15
+286,Mathematics Assignment 6,Mathematics,Grade 8,B,2025-08-10,2025-08-17,25
+287,Science Assignment 1,Science,Grade 8,B,2025-07-31,2025-08-07,15
+288,Science Assignment 2,Science,Grade 8,B,2025-08-27,2025-09-03,25
+289,Science Assignment 3,Science,Grade 8,B,2025-08-23,2025-08-30,10
+290,Science Assignment 4,Science,Grade 8,B,2025-09-13,2025-09-20,15
+291,Science Assignment 5,Science,Grade 8,B,2025-08-12,2025-08-19,20
+292,Science Assignment 6,Science,Grade 8,B,2025-09-13,2025-09-20,10
+293,Science Assignment 7,Science,Grade 8,B,2025-09-04,2025-09-11,10
+294,Science Assignment 8,Science,Grade 8,B,2025-09-02,2025-09-09,15
+295,English Assignment 1,English,Grade 8,B,2025-08-19,2025-08-26,15
+296,English Assignment 2,English,Grade 8,B,2025-08-28,2025-09-04,10
+297,English Assignment 3,English,Grade 8,B,2025-08-15,2025-08-22,25
+298,English Assignment 4,English,Grade 8,B,2025-09-01,2025-09-08,20
+299,English Assignment 5,English,Grade 8,B,2025-09-06,2025-09-13,25
+300,English Assignment 6,English,Grade 8,B,2025-09-07,2025-09-14,25
+301,English Assignment 7,English,Grade 8,B,2025-09-05,2025-09-12,10
+302,Social Studies Assignment 1,Social Studies,Grade 8,B,2025-08-21,2025-08-28,25
+303,Social Studies Assignment 2,Social Studies,Grade 8,B,2025-09-07,2025-09-14,15
+304,Social Studies Assignment 3,Social Studies,Grade 8,B,2025-09-11,2025-09-18,20
+305,Social Studies Assignment 4,Social Studies,Grade 8,B,2025-09-07,2025-09-14,10
+306,Social Studies Assignment 5,Social Studies,Grade 8,B,2025-09-11,2025-09-18,15
+307,Social Studies Assignment 6,Social Studies,Grade 8,B,2025-08-19,2025-08-26,10
+308,Social Studies Assignment 7,Social Studies,Grade 8,B,2025-08-14,2025-08-21,20
+309,Hindi Assignment 1,Hindi,Grade 8,B,2025-08-10,2025-08-17,20
+310,Hindi Assignment 2,Hindi,Grade 8,B,2025-09-12,2025-09-19,15
+311,Hindi Assignment 3,Hindi,Grade 8,B,2025-08-31,2025-09-07,25
+312,Hindi Assignment 4,Hindi,Grade 8,B,2025-08-25,2025-09-01,15
+313,Hindi Assignment 5,Hindi,Grade 8,B,2025-09-04,2025-09-11,25
+314,Computer Science Assignment 1,Computer Science,Grade 8,B,2025-08-10,2025-08-17,25
+315,Computer Science Assignment 2,Computer Science,Grade 8,B,2025-09-08,2025-09-15,15
+316,Computer Science Assignment 3,Computer Science,Grade 8,B,2025-09-03,2025-09-10,15
+317,Computer Science Assignment 4,Computer Science,Grade 8,B,2025-08-30,2025-09-06,20
+318,Computer Science Assignment 5,Computer Science,Grade 8,B,2025-08-07,2025-08-14,15
+319,Computer Science Assignment 6,Computer Science,Grade 8,B,2025-08-19,2025-08-26,25
+320,Computer Science Assignment 7,Computer Science,Grade 8,B,2025-09-07,2025-09-14,10
+321,Computer Science Assignment 8,Computer Science,Grade 8,B,2025-08-21,2025-08-28,10
+322,Mathematics Assignment 1,Mathematics,Grade 8,C,2025-08-07,2025-08-14,15
+323,Mathematics Assignment 2,Mathematics,Grade 8,C,2025-08-23,2025-08-30,25
+324,Mathematics Assignment 3,Mathematics,Grade 8,C,2025-08-25,2025-09-01,25
+325,Mathematics Assignment 4,Mathematics,Grade 8,C,2025-08-25,2025-09-01,25
+326,Mathematics Assignment 5,Mathematics,Grade 8,C,2025-08-30,2025-09-06,15
+327,Mathematics Assignment 6,Mathematics,Grade 8,C,2025-08-04,2025-08-11,10
+328,Mathematics Assignment 7,Mathematics,Grade 8,C,2025-08-13,2025-08-20,20
+329,Mathematics Assignment 8,Mathematics,Grade 8,C,2025-08-01,2025-08-08,20
+330,Science Assignment 1,Science,Grade 8,C,2025-09-02,2025-09-09,20
+331,Science Assignment 2,Science,Grade 8,C,2025-08-09,2025-08-16,25
+332,Science Assignment 3,Science,Grade 8,C,2025-09-04,2025-09-11,25
+333,Science Assignment 4,Science,Grade 8,C,2025-09-03,2025-09-10,10
+334,Science Assignment 5,Science,Grade 8,C,2025-09-04,2025-09-11,10
+335,Science Assignment 6,Science,Grade 8,C,2025-08-16,2025-08-23,20
+336,English Assignment 1,English,Grade 8,C,2025-08-27,2025-09-03,15
+337,English Assignment 2,English,Grade 8,C,2025-08-26,2025-09-02,10
+338,English Assignment 3,English,Grade 8,C,2025-09-09,2025-09-16,15
+339,English Assignment 4,English,Grade 8,C,2025-08-18,2025-08-25,10
+340,English Assignment 5,English,Grade 8,C,2025-08-27,2025-09-03,20
+341,Social Studies Assignment 1,Social Studies,Grade 8,C,2025-08-04,2025-08-11,25
+342,Social Studies Assignment 2,Social Studies,Grade 8,C,2025-08-06,2025-08-13,15
+343,Social Studies Assignment 3,Social Studies,Grade 8,C,2025-08-12,2025-08-19,20
+344,Social Studies Assignment 4,Social Studies,Grade 8,C,2025-09-13,2025-09-20,25
+345,Social Studies Assignment 5,Social Studies,Grade 8,C,2025-08-09,2025-08-16,15
+346,Social Studies Assignment 6,Social Studies,Grade 8,C,2025-08-12,2025-08-19,15
+347,Social Studies Assignment 7,Social Studies,Grade 8,C,2025-08-02,2025-08-09,20
+348,Hindi Assignment 1,Hindi,Grade 8,C,2025-09-06,2025-09-13,15
+349,Hindi Assignment 2,Hindi,Grade 8,C,2025-08-19,2025-08-26,20
+350,Hindi Assignment 3,Hindi,Grade 8,C,2025-08-17,2025-08-24,20
+351,Hindi Assignment 4,Hindi,Grade 8,C,2025-08-31,2025-09-07,10
+352,Hindi Assignment 5,Hindi,Grade 8,C,2025-08-07,2025-08-14,25
+353,Hindi Assignment 6,Hindi,Grade 8,C,2025-08-02,2025-08-09,20
+354,Hindi Assignment 7,Hindi,Grade 8,C,2025-09-09,2025-09-16,15
+355,Computer Science Assignment 1,Computer Science,Grade 8,C,2025-08-14,2025-08-21,15
+356,Computer Science Assignment 2,Computer Science,Grade 8,C,2025-09-13,2025-09-20,20
+357,Computer Science Assignment 3,Computer Science,Grade 8,C,2025-08-14,2025-08-21,25
+358,Computer Science Assignment 4,Computer Science,Grade 8,C,2025-08-30,2025-09-06,15
+359,Computer Science Assignment 5,Computer Science,Grade 8,C,2025-09-04,2025-09-11,20
+360,Computer Science Assignment 6,Computer Science,Grade 8,C,2025-09-08,2025-09-15,25
+361,Mathematics Assignment 1,Mathematics,Grade 9,A,2025-08-27,2025-09-03,10
+362,Mathematics Assignment 2,Mathematics,Grade 9,A,2025-09-08,2025-09-15,10
+363,Mathematics Assignment 3,Mathematics,Grade 9,A,2025-08-24,2025-08-31,20
+364,Mathematics Assignment 4,Mathematics,Grade 9,A,2025-09-12,2025-09-19,20
+365,Mathematics Assignment 5,Mathematics,Grade 9,A,2025-08-28,2025-09-04,25
+366,Mathematics Assignment 6,Mathematics,Grade 9,A,2025-08-19,2025-08-26,10
+367,Mathematics Assignment 7,Mathematics,Grade 9,A,2025-08-04,2025-08-11,25
+368,Mathematics Assignment 8,Mathematics,Grade 9,A,2025-09-08,2025-09-15,20
+369,Science Assignment 1,Science,Grade 9,A,2025-09-02,2025-09-09,25
+370,Science Assignment 2,Science,Grade 9,A,2025-08-12,2025-08-19,25
+371,Science Assignment 3,Science,Grade 9,A,2025-08-12,2025-08-19,25
+372,Science Assignment 4,Science,Grade 9,A,2025-08-16,2025-08-23,20
+373,Science Assignment 5,Science,Grade 9,A,2025-08-17,2025-08-24,20
+374,English Assignment 1,English,Grade 9,A,2025-09-04,2025-09-11,25
+375,English Assignment 2,English,Grade 9,A,2025-08-20,2025-08-27,10
+376,English Assignment 3,English,Grade 9,A,2025-08-01,2025-08-08,10
+377,English Assignment 4,English,Grade 9,A,2025-09-08,2025-09-15,25
+378,English Assignment 5,English,Grade 9,A,2025-07-31,2025-08-07,10
+379,English Assignment 6,English,Grade 9,A,2025-08-09,2025-08-16,25
+380,Social Studies Assignment 1,Social Studies,Grade 9,A,2025-07-30,2025-08-06,25
+381,Social Studies Assignment 2,Social Studies,Grade 9,A,2025-08-11,2025-08-18,15
+382,Social Studies Assignment 3,Social Studies,Grade 9,A,2025-09-09,2025-09-16,20
+383,Social Studies Assignment 4,Social Studies,Grade 9,A,2025-08-09,2025-08-16,20
+384,Social Studies Assignment 5,Social Studies,Grade 9,A,2025-08-04,2025-08-11,20
+385,Social Studies Assignment 6,Social Studies,Grade 9,A,2025-08-15,2025-08-22,10
+386,Social Studies Assignment 7,Social Studies,Grade 9,A,2025-08-22,2025-08-29,15
+387,Social Studies Assignment 8,Social Studies,Grade 9,A,2025-08-02,2025-08-09,25
+388,Hindi Assignment 1,Hindi,Grade 9,A,2025-09-12,2025-09-19,15
+389,Hindi Assignment 2,Hindi,Grade 9,A,2025-08-26,2025-09-02,10
+390,Hindi Assignment 3,Hindi,Grade 9,A,2025-09-13,2025-09-20,10
+391,Hindi Assignment 4,Hindi,Grade 9,A,2025-07-30,2025-08-06,15
+392,Hindi Assignment 5,Hindi,Grade 9,A,2025-08-29,2025-09-05,10
+393,Hindi Assignment 6,Hindi,Grade 9,A,2025-08-07,2025-08-14,15
+394,Hindi Assignment 7,Hindi,Grade 9,A,2025-09-01,2025-09-08,25
+395,Computer Science Assignment 1,Computer Science,Grade 9,A,2025-07-30,2025-08-06,20
+396,Computer Science Assignment 2,Computer Science,Grade 9,A,2025-08-06,2025-08-13,25
+397,Computer Science Assignment 3,Computer Science,Grade 9,A,2025-09-12,2025-09-19,15
+398,Computer Science Assignment 4,Computer Science,Grade 9,A,2025-08-29,2025-09-05,10
+399,Computer Science Assignment 5,Computer Science,Grade 9,A,2025-08-13,2025-08-20,25
+400,Mathematics Assignment 1,Mathematics,Grade 9,B,2025-08-05,2025-08-12,10
+401,Mathematics Assignment 2,Mathematics,Grade 9,B,2025-08-19,2025-08-26,20
+402,Mathematics Assignment 3,Mathematics,Grade 9,B,2025-08-18,2025-08-25,15
+403,Mathematics Assignment 4,Mathematics,Grade 9,B,2025-08-23,2025-08-30,15
+404,Mathematics Assignment 5,Mathematics,Grade 9,B,2025-09-09,2025-09-16,15
+405,Science Assignment 1,Science,Grade 9,B,2025-09-01,2025-09-08,10
+406,Science Assignment 2,Science,Grade 9,B,2025-09-07,2025-09-14,15
+407,Science Assignment 3,Science,Grade 9,B,2025-08-27,2025-09-03,20
+408,Science Assignment 4,Science,Grade 9,B,2025-08-12,2025-08-19,15
+409,Science Assignment 5,Science,Grade 9,B,2025-08-25,2025-09-01,25
+410,English Assignment 1,English,Grade 9,B,2025-08-04,2025-08-11,10
+411,English Assignment 2,English,Grade 9,B,2025-08-07,2025-08-14,10
+412,English Assignment 3,English,Grade 9,B,2025-09-05,2025-09-12,25
+413,English Assignment 4,English,Grade 9,B,2025-08-21,2025-08-28,25
+414,English Assignment 5,English,Grade 9,B,2025-08-19,2025-08-26,15
+415,English Assignment 6,English,Grade 9,B,2025-08-14,2025-08-21,20
+416,Social Studies Assignment 1,Social Studies,Grade 9,B,2025-08-14,2025-08-21,20
+417,Social Studies Assignment 2,Social Studies,Grade 9,B,2025-09-12,2025-09-19,10
+418,Social Studies Assignment 3,Social Studies,Grade 9,B,2025-09-10,2025-09-17,20
+419,Social Studies Assignment 4,Social Studies,Grade 9,B,2025-08-12,2025-08-19,15
+420,Social Studies Assignment 5,Social Studies,Grade 9,B,2025-08-24,2025-08-31,20
+421,Hindi Assignment 1,Hindi,Grade 9,B,2025-08-14,2025-08-21,25
+422,Hindi Assignment 2,Hindi,Grade 9,B,2025-08-23,2025-08-30,10
+423,Hindi Assignment 3,Hindi,Grade 9,B,2025-08-14,2025-08-21,25
+424,Hindi Assignment 4,Hindi,Grade 9,B,2025-09-08,2025-09-15,10
+425,Hindi Assignment 5,Hindi,Grade 9,B,2025-09-01,2025-09-08,10
+426,Computer Science Assignment 1,Computer Science,Grade 9,B,2025-08-19,2025-08-26,15
+427,Computer Science Assignment 2,Computer Science,Grade 9,B,2025-08-23,2025-08-30,25
+428,Computer Science Assignment 3,Computer Science,Grade 9,B,2025-08-22,2025-08-29,15
+429,Computer Science Assignment 4,Computer Science,Grade 9,B,2025-08-29,2025-09-05,10
+430,Computer Science Assignment 5,Computer Science,Grade 9,B,2025-07-31,2025-08-07,10
+431,Computer Science Assignment 6,Computer Science,Grade 9,B,2025-07-30,2025-08-06,20
+432,Computer Science Assignment 7,Computer Science,Grade 9,B,2025-08-12,2025-08-19,10
+433,Mathematics Assignment 1,Mathematics,Grade 9,C,2025-08-24,2025-08-31,20
+434,Mathematics Assignment 2,Mathematics,Grade 9,C,2025-09-08,2025-09-15,25
+435,Mathematics Assignment 3,Mathematics,Grade 9,C,2025-08-26,2025-09-02,25
+436,Mathematics Assignment 4,Mathematics,Grade 9,C,2025-08-04,2025-08-11,15
+437,Mathematics Assignment 5,Mathematics,Grade 9,C,2025-08-16,2025-08-23,10
+438,Science Assignment 1,Science,Grade 9,C,2025-08-04,2025-08-11,15
+439,Science Assignment 2,Science,Grade 9,C,2025-08-08,2025-08-15,20
+440,Science Assignment 3,Science,Grade 9,C,2025-08-24,2025-08-31,10
+441,Science Assignment 4,Science,Grade 9,C,2025-08-18,2025-08-25,25
+442,Science Assignment 5,Science,Grade 9,C,2025-08-14,2025-08-21,10
+443,Science Assignment 6,Science,Grade 9,C,2025-08-14,2025-08-21,10
+444,Science Assignment 7,Science,Grade 9,C,2025-08-26,2025-09-02,10
+445,English Assignment 1,English,Grade 9,C,2025-09-07,2025-09-14,10
+446,English Assignment 2,English,Grade 9,C,2025-08-18,2025-08-25,15
+447,English Assignment 3,English,Grade 9,C,2025-08-06,2025-08-13,10
+448,English Assignment 4,English,Grade 9,C,2025-09-13,2025-09-20,15
+449,English Assignment 5,English,Grade 9,C,2025-09-12,2025-09-19,10
+450,English Assignment 6,English,Grade 9,C,2025-08-09,2025-08-16,25
+451,English Assignment 7,English,Grade 9,C,2025-08-21,2025-08-28,20
+452,English Assignment 8,English,Grade 9,C,2025-08-09,2025-08-16,20
+453,Social Studies Assignment 1,Social Studies,Grade 9,C,2025-08-16,2025-08-23,10
+454,Social Studies Assignment 2,Social Studies,Grade 9,C,2025-07-31,2025-08-07,20
+455,Social Studies Assignment 3,Social Studies,Grade 9,C,2025-08-26,2025-09-02,20
+456,Social Studies Assignment 4,Social Studies,Grade 9,C,2025-09-01,2025-09-08,10
+457,Social Studies Assignment 5,Social Studies,Grade 9,C,2025-08-15,2025-08-22,10
+458,Social Studies Assignment 6,Social Studies,Grade 9,C,2025-08-30,2025-09-06,25
+459,Hindi Assignment 1,Hindi,Grade 9,C,2025-08-02,2025-08-09,25
+460,Hindi Assignment 2,Hindi,Grade 9,C,2025-09-04,2025-09-11,15
+461,Hindi Assignment 3,Hindi,Grade 9,C,2025-08-22,2025-08-29,15
+462,Hindi Assignment 4,Hindi,Grade 9,C,2025-08-15,2025-08-22,10
+463,Hindi Assignment 5,Hindi,Grade 9,C,2025-09-04,2025-09-11,10
+464,Hindi Assignment 6,Hindi,Grade 9,C,2025-08-13,2025-08-20,10
+465,Hindi Assignment 7,Hindi,Grade 9,C,2025-08-01,2025-08-08,10
+466,Computer Science Assignment 1,Computer Science,Grade 9,C,2025-08-01,2025-08-08,25
+467,Computer Science Assignment 2,Computer Science,Grade 9,C,2025-08-22,2025-08-29,25
+468,Computer Science Assignment 3,Computer Science,Grade 9,C,2025-08-08,2025-08-15,15
+469,Computer Science Assignment 4,Computer Science,Grade 9,C,2025-08-01,2025-08-08,25
+470,Computer Science Assignment 5,Computer Science,Grade 9,C,2025-08-13,2025-08-20,20
+471,Computer Science Assignment 6,Computer Science,Grade 9,C,2025-08-14,2025-08-21,25
+472,Mathematics Assignment 1,Mathematics,Grade 10,A,2025-08-16,2025-08-23,10
+473,Mathematics Assignment 2,Mathematics,Grade 10,A,2025-09-04,2025-09-11,20
+474,Mathematics Assignment 3,Mathematics,Grade 10,A,2025-08-06,2025-08-13,10
+475,Mathematics Assignment 4,Mathematics,Grade 10,A,2025-08-10,2025-08-17,15
+476,Mathematics Assignment 5,Mathematics,Grade 10,A,2025-09-01,2025-09-08,10
+477,Mathematics Assignment 6,Mathematics,Grade 10,A,2025-08-24,2025-08-31,10
+478,Mathematics Assignment 7,Mathematics,Grade 10,A,2025-08-28,2025-09-04,20
+479,Science Assignment 1,Science,Grade 10,A,2025-08-19,2025-08-26,10
+480,Science Assignment 2,Science,Grade 10,A,2025-09-03,2025-09-10,25
+481,Science Assignment 3,Science,Grade 10,A,2025-07-30,2025-08-06,20
+482,Science Assignment 4,Science,Grade 10,A,2025-08-11,2025-08-18,20
+483,Science Assignment 5,Science,Grade 10,A,2025-09-04,2025-09-11,20
+484,Science Assignment 6,Science,Grade 10,A,2025-09-07,2025-09-14,15
+485,Science Assignment 7,Science,Grade 10,A,2025-08-28,2025-09-04,20
+486,English Assignment 1,English,Grade 10,A,2025-08-11,2025-08-18,15
+487,English Assignment 2,English,Grade 10,A,2025-08-08,2025-08-15,10
+488,English Assignment 3,English,Grade 10,A,2025-08-25,2025-09-01,10
+489,English Assignment 4,English,Grade 10,A,2025-08-13,2025-08-20,20
+490,English Assignment 5,English,Grade 10,A,2025-09-08,2025-09-15,10
+491,English Assignment 6,English,Grade 10,A,2025-08-20,2025-08-27,10
+492,English Assignment 7,English,Grade 10,A,2025-09-10,2025-09-17,25
+493,English Assignment 8,English,Grade 10,A,2025-08-18,2025-08-25,10
+494,Social Studies Assignment 1,Social Studies,Grade 10,A,2025-09-01,2025-09-08,15
+495,Social Studies Assignment 2,Social Studies,Grade 10,A,2025-08-25,2025-09-01,25
+496,Social Studies Assignment 3,Social Studies,Grade 10,A,2025-08-02,2025-08-09,15
+497,Social Studies Assignment 4,Social Studies,Grade 10,A,2025-09-13,2025-09-20,20
+498,Social Studies Assignment 5,Social Studies,Grade 10,A,2025-08-04,2025-08-11,10
+499,Social Studies Assignment 6,Social Studies,Grade 10,A,2025-08-13,2025-08-20,25
+500,Hindi Assignment 1,Hindi,Grade 10,A,2025-08-28,2025-09-04,10
+501,Hindi Assignment 2,Hindi,Grade 10,A,2025-09-05,2025-09-12,10
+502,Hindi Assignment 3,Hindi,Grade 10,A,2025-08-31,2025-09-07,15
+503,Hindi Assignment 4,Hindi,Grade 10,A,2025-09-08,2025-09-15,25
+504,Hindi Assignment 5,Hindi,Grade 10,A,2025-08-03,2025-08-10,10
+505,Hindi Assignment 6,Hindi,Grade 10,A,2025-08-26,2025-09-02,15
+506,Hindi Assignment 7,Hindi,Grade 10,A,2025-08-14,2025-08-21,20
+507,Computer Science Assignment 1,Computer Science,Grade 10,A,2025-08-19,2025-08-26,25
+508,Computer Science Assignment 2,Computer Science,Grade 10,A,2025-09-12,2025-09-19,20
+509,Computer Science Assignment 3,Computer Science,Grade 10,A,2025-08-19,2025-08-26,25
+510,Computer Science Assignment 4,Computer Science,Grade 10,A,2025-08-16,2025-08-23,15
+511,Computer Science Assignment 5,Computer Science,Grade 10,A,2025-08-03,2025-08-10,15
+512,Computer Science Assignment 6,Computer Science,Grade 10,A,2025-08-07,2025-08-14,10
+513,Computer Science Assignment 7,Computer Science,Grade 10,A,2025-08-08,2025-08-15,10
+514,Mathematics Assignment 1,Mathematics,Grade 10,B,2025-08-27,2025-09-03,25
+515,Mathematics Assignment 2,Mathematics,Grade 10,B,2025-08-19,2025-08-26,25
+516,Mathematics Assignment 3,Mathematics,Grade 10,B,2025-08-06,2025-08-13,20
+517,Mathematics Assignment 4,Mathematics,Grade 10,B,2025-08-12,2025-08-19,25
+518,Mathematics Assignment 5,Mathematics,Grade 10,B,2025-08-18,2025-08-25,25
+519,Mathematics Assignment 6,Mathematics,Grade 10,B,2025-08-15,2025-08-22,10
+520,Science Assignment 1,Science,Grade 10,B,2025-08-09,2025-08-16,20
+521,Science Assignment 2,Science,Grade 10,B,2025-09-13,2025-09-20,10
+522,Science Assignment 3,Science,Grade 10,B,2025-08-12,2025-08-19,20
+523,Science Assignment 4,Science,Grade 10,B,2025-08-08,2025-08-15,10
+524,Science Assignment 5,Science,Grade 10,B,2025-09-13,2025-09-20,15
+525,English Assignment 1,English,Grade 10,B,2025-08-24,2025-08-31,10
+526,English Assignment 2,English,Grade 10,B,2025-09-11,2025-09-18,20
+527,English Assignment 3,English,Grade 10,B,2025-08-15,2025-08-22,15
+528,English Assignment 4,English,Grade 10,B,2025-07-31,2025-08-07,25
+529,English Assignment 5,English,Grade 10,B,2025-08-27,2025-09-03,15
+530,English Assignment 6,English,Grade 10,B,2025-08-05,2025-08-12,25
+531,English Assignment 7,English,Grade 10,B,2025-08-05,2025-08-12,15
+532,Social Studies Assignment 1,Social Studies,Grade 10,B,2025-07-30,2025-08-06,10
+533,Social Studies Assignment 2,Social Studies,Grade 10,B,2025-08-13,2025-08-20,15
+534,Social Studies Assignment 3,Social Studies,Grade 10,B,2025-08-11,2025-08-18,25
+535,Social Studies Assignment 4,Social Studies,Grade 10,B,2025-08-22,2025-08-29,10
+536,Social Studies Assignment 5,Social Studies,Grade 10,B,2025-09-05,2025-09-12,20
+537,Hindi Assignment 1,Hindi,Grade 10,B,2025-07-31,2025-08-07,10
+538,Hindi Assignment 2,Hindi,Grade 10,B,2025-08-11,2025-08-18,25
+539,Hindi Assignment 3,Hindi,Grade 10,B,2025-08-07,2025-08-14,10
+540,Hindi Assignment 4,Hindi,Grade 10,B,2025-08-20,2025-08-27,10
+541,Hindi Assignment 5,Hindi,Grade 10,B,2025-08-01,2025-08-08,25
+542,Computer Science Assignment 1,Computer Science,Grade 10,B,2025-08-09,2025-08-16,25
+543,Computer Science Assignment 2,Computer Science,Grade 10,B,2025-08-24,2025-08-31,25
+544,Computer Science Assignment 3,Computer Science,Grade 10,B,2025-07-31,2025-08-07,25
+545,Computer Science Assignment 4,Computer Science,Grade 10,B,2025-09-11,2025-09-18,25
+546,Computer Science Assignment 5,Computer Science,Grade 10,B,2025-08-10,2025-08-17,20
+547,Mathematics Assignment 1,Mathematics,Grade 10,C,2025-08-10,2025-08-17,20
+548,Mathematics Assignment 2,Mathematics,Grade 10,C,2025-08-16,2025-08-23,25
+549,Mathematics Assignment 3,Mathematics,Grade 10,C,2025-08-08,2025-08-15,10
+550,Mathematics Assignment 4,Mathematics,Grade 10,C,2025-09-07,2025-09-14,15
+551,Mathematics Assignment 5,Mathematics,Grade 10,C,2025-09-09,2025-09-16,20
+552,Mathematics Assignment 6,Mathematics,Grade 10,C,2025-08-30,2025-09-06,25
+553,Science Assignment 1,Science,Grade 10,C,2025-08-02,2025-08-09,10
+554,Science Assignment 2,Science,Grade 10,C,2025-08-16,2025-08-23,25
+555,Science Assignment 3,Science,Grade 10,C,2025-08-07,2025-08-14,25
+556,Science Assignment 4,Science,Grade 10,C,2025-08-11,2025-08-18,15
+557,Science Assignment 5,Science,Grade 10,C,2025-09-08,2025-09-15,10
+558,Science Assignment 6,Science,Grade 10,C,2025-08-23,2025-08-30,20
+559,Science Assignment 7,Science,Grade 10,C,2025-08-29,2025-09-05,25
+560,Science Assignment 8,Science,Grade 10,C,2025-08-21,2025-08-28,20
+561,English Assignment 1,English,Grade 10,C,2025-08-16,2025-08-23,15
+562,English Assignment 2,English,Grade 10,C,2025-07-31,2025-08-07,20
+563,English Assignment 3,English,Grade 10,C,2025-09-06,2025-09-13,15
+564,English Assignment 4,English,Grade 10,C,2025-07-31,2025-08-07,20
+565,English Assignment 5,English,Grade 10,C,2025-08-02,2025-08-09,25
+566,English Assignment 6,English,Grade 10,C,2025-09-01,2025-09-08,20
+567,English Assignment 7,English,Grade 10,C,2025-09-05,2025-09-12,15
+568,English Assignment 8,English,Grade 10,C,2025-08-09,2025-08-16,10
+569,Social Studies Assignment 1,Social Studies,Grade 10,C,2025-09-10,2025-09-17,15
+570,Social Studies Assignment 2,Social Studies,Grade 10,C,2025-08-16,2025-08-23,10
+571,Social Studies Assignment 3,Social Studies,Grade 10,C,2025-08-13,2025-08-20,25
+572,Social Studies Assignment 4,Social Studies,Grade 10,C,2025-08-21,2025-08-28,15
+573,Social Studies Assignment 5,Social Studies,Grade 10,C,2025-08-10,2025-08-17,15
+574,Social Studies Assignment 6,Social Studies,Grade 10,C,2025-09-05,2025-09-12,20
+575,Hindi Assignment 1,Hindi,Grade 10,C,2025-09-05,2025-09-12,10
+576,Hindi Assignment 2,Hindi,Grade 10,C,2025-09-13,2025-09-20,20
+577,Hindi Assignment 3,Hindi,Grade 10,C,2025-09-04,2025-09-11,15
+578,Hindi Assignment 4,Hindi,Grade 10,C,2025-09-04,2025-09-11,15
+579,Hindi Assignment 5,Hindi,Grade 10,C,2025-08-30,2025-09-06,20
+580,Hindi Assignment 6,Hindi,Grade 10,C,2025-08-10,2025-08-17,25
+581,Hindi Assignment 7,Hindi,Grade 10,C,2025-08-01,2025-08-08,10
+582,Computer Science Assignment 1,Computer Science,Grade 10,C,2025-08-13,2025-08-20,15
+583,Computer Science Assignment 2,Computer Science,Grade 10,C,2025-07-31,2025-08-07,25
+584,Computer Science Assignment 3,Computer Science,Grade 10,C,2025-07-30,2025-08-06,20
+585,Computer Science Assignment 4,Computer Science,Grade 10,C,2025-09-07,2025-09-14,15
+586,Computer Science Assignment 5,Computer Science,Grade 10,C,2025-08-07,2025-08-14,20

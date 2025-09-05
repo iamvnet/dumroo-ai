@@ -1,0 +1,71 @@
+quiz_id,quiz_title,subject,grade,section,scheduled_date,scheduled_time,duration_minutes,total_marks,syllabus_topics
+1,Mathematics Quiz - Chapter 2,Mathematics,Grade 6,A,2025-09-10,10:00,30,25,Chapter 4 - Applications
+2,Science Quiz - Chapter 4,Science,Grade 6,A,2025-09-14,10:30,60,30,Chapter 5 - Advanced
+3,English Quiz - Chapter 3,English,Grade 6,A,2025-09-19,11:30,30,30,Chapter 5 - Basics
+4,Social Studies Quiz - Chapter 4,Social Studies,Grade 6,A,2025-09-06,11:00,45,20,Chapter 4 - Applications
+5,Computer Science Quiz - Chapter 2,Computer Science,Grade 6,A,2025-09-12,15:30,30,20,Chapter 5 - Basics
+6,Mathematics Quiz - Chapter 5,Mathematics,Grade 6,B,2025-09-07,14:30,30,20,Chapter 2 - Advanced
+7,English Quiz - Chapter 5,English,Grade 6,B,2025-09-10,13:00,60,20,Chapter 2 - Applications
+8,Social Studies Quiz - Chapter 8,Social Studies,Grade 6,B,2025-09-08,12:00,45,35,Chapter 5 - Problem Solving
+9,Hindi Quiz - Chapter 1,Hindi,Grade 6,B,2025-09-19,15:00,60,35,Chapter 3 - Problem Solving
+10,Computer Science Quiz - Chapter 1,Computer Science,Grade 6,B,2025-09-10,13:00,60,25,Chapter 1 - Advanced
+11,Mathematics Quiz - Chapter 1,Mathematics,Grade 6,C,2025-09-16,15:30,45,20,Chapter 5 - Applications
+12,Science Quiz - Chapter 5,Science,Grade 6,C,2025-09-17,9:00,60,25,Chapter 4 - Applications
+13,English Quiz - Chapter 7,English,Grade 6,C,2025-09-08,14:30,60,35,Chapter 2 - Basics
+14,Hindi Quiz - Chapter 6,Hindi,Grade 6,C,2025-09-12,12:00,45,20,Chapter 1 - Basics
+15,Computer Science Quiz - Chapter 1,Computer Science,Grade 6,C,2025-09-14,14:00,60,20,Chapter 1 - Advanced
+16,Mathematics Quiz - Chapter 4,Mathematics,Grade 7,A,2025-09-11,12:00,60,35,Chapter 5 - Applications
+17,Science Quiz - Chapter 3,Science,Grade 7,A,2025-09-18,9:00,30,35,Chapter 1 - Basics
+18,Social Studies Quiz - Chapter 7,Social Studies,Grade 7,A,2025-09-18,13:00,30,25,Chapter 5 - Applications
+19,Hindi Quiz - Chapter 7,Hindi,Grade 7,A,2025-09-16,10:00,45,30,Chapter 1 - Problem Solving
+20,Mathematics Quiz - Chapter 1,Mathematics,Grade 7,B,2025-09-15,12:00,60,25,Chapter 4 - Advanced
+21,Science Quiz - Chapter 5,Science,Grade 7,B,2025-09-08,15:00,60,35,Chapter 2 - Problem Solving
+22,English Quiz - Chapter 4,English,Grade 7,B,2025-09-19,11:00,60,35,Chapter 2 - Applications
+23,Social Studies Quiz - Chapter 6,Social Studies,Grade 7,B,2025-09-10,11:00,30,25,Chapter 2 - Advanced
+24,Hindi Quiz - Chapter 6,Hindi,Grade 7,B,2025-09-19,12:00,60,25,Chapter 3 - Applications
+25,Computer Science Quiz - Chapter 2,Computer Science,Grade 7,B,2025-09-16,12:00,60,20,Chapter 3 - Problem Solving
+26,Science Quiz - Chapter 4,Science,Grade 7,C,2025-09-11,9:00,60,35,Chapter 1 - Problem Solving
+27,Social Studies Quiz - Chapter 1,Social Studies,Grade 7,C,2025-09-18,15:30,30,35,Chapter 4 - Problem Solving
+28,Hindi Quiz - Chapter 1,Hindi,Grade 7,C,2025-09-08,10:30,60,20,Chapter 3 - Problem Solving
+29,Science Quiz - Chapter 2,Science,Grade 8,A,2025-09-07,12:00,60,30,Chapter 3 - Problem Solving
+30,English Quiz - Chapter 5,English,Grade 8,A,2025-09-13,13:30,30,20,Chapter 5 - Advanced
+31,Social Studies Quiz - Chapter 7,Social Studies,Grade 8,A,2025-09-14,11:00,45,25,Chapter 1 - Basics
+32,Hindi Quiz - Chapter 1,Hindi,Grade 8,A,2025-09-16,11:30,30,20,Chapter 5 - Applications
+33,Computer Science Quiz - Chapter 6,Computer Science,Grade 8,A,2025-09-09,12:30,60,25,Chapter 5 - Advanced
+34,Mathematics Quiz - Chapter 6,Mathematics,Grade 8,B,2025-09-19,15:30,60,20,Chapter 5 - Problem Solving
+35,Science Quiz - Chapter 1,Science,Grade 8,B,2025-09-15,9:00,45,20,Chapter 2 - Advanced
+36,English Quiz - Chapter 5,English,Grade 8,B,2025-09-08,14:00,45,30,Chapter 4 - Basics
+37,Social Studies Quiz - Chapter 2,Social Studies,Grade 8,B,2025-09-11,13:00,45,35,Chapter 2 - Problem Solving
+38,Hindi Quiz - Chapter 7,Hindi,Grade 8,B,2025-09-18,9:30,45,35,Chapter 2 - Problem Solving
+39,Computer Science Quiz - Chapter 5,Computer Science,Grade 8,B,2025-09-13,12:30,30,20,Chapter 5 - Advanced
+40,Mathematics Quiz - Chapter 1,Mathematics,Grade 8,C,2025-09-08,13:00,60,20,Chapter 1 - Applications
+41,Science Quiz - Chapter 8,Science,Grade 8,C,2025-09-16,11:00,60,20,Chapter 3 - Advanced
+42,English Quiz - Chapter 3,English,Grade 8,C,2025-09-08,10:00,45,35,Chapter 3 - Applications
+43,Social Studies Quiz - Chapter 7,Social Studies,Grade 8,C,2025-09-18,13:00,60,35,Chapter 4 - Problem Solving
+44,Computer Science Quiz - Chapter 6,Computer Science,Grade 8,C,2025-09-11,10:30,60,35,Chapter 5 - Problem Solving
+45,English Quiz - Chapter 7,English,Grade 9,A,2025-09-17,15:30,45,35,Chapter 5 - Advanced
+46,Social Studies Quiz - Chapter 8,Social Studies,Grade 9,A,2025-09-10,9:00,30,20,Chapter 1 - Advanced
+47,Hindi Quiz - Chapter 7,Hindi,Grade 9,A,2025-09-10,14:30,45,25,Chapter 2 - Problem Solving
+48,Computer Science Quiz - Chapter 6,Computer Science,Grade 9,A,2025-09-14,10:30,60,30,Chapter 3 - Applications
+49,Mathematics Quiz - Chapter 2,Mathematics,Grade 9,B,2025-09-19,14:30,45,20,Chapter 3 - Applications
+50,Science Quiz - Chapter 8,Science,Grade 9,B,2025-09-09,9:30,60,30,Chapter 1 - Basics
+51,English Quiz - Chapter 7,English,Grade 9,B,2025-09-15,14:00,30,35,Chapter 3 - Problem Solving
+52,Social Studies Quiz - Chapter 3,Social Studies,Grade 9,B,2025-09-10,10:00,60,25,Chapter 2 - Advanced
+53,Hindi Quiz - Chapter 8,Hindi,Grade 9,B,2025-09-15,15:30,60,20,Chapter 1 - Basics
+54,Science Quiz - Chapter 8,Science,Grade 9,C,2025-09-17,11:00,45,20,Chapter 3 - Basics
+55,Social Studies Quiz - Chapter 3,Social Studies,Grade 9,C,2025-09-15,12:00,45,25,Chapter 4 - Problem Solving
+56,Hindi Quiz - Chapter 4,Hindi,Grade 9,C,2025-09-15,14:30,45,35,Chapter 5 - Advanced
+57,Mathematics Quiz - Chapter 2,Mathematics,Grade 10,A,2025-09-12,14:30,45,35,Chapter 3 - Problem Solving
+58,Science Quiz - Chapter 5,Science,Grade 10,A,2025-09-06,10:00,60,35,Chapter 3 - Advanced
+59,Hindi Quiz - Chapter 1,Hindi,Grade 10,A,2025-09-15,14:00,45,25,Chapter 1 - Advanced
+60,Mathematics Quiz - Chapter 8,Mathematics,Grade 10,B,2025-09-11,11:00,30,30,Chapter 3 - Problem Solving
+61,Science Quiz - Chapter 7,Science,Grade 10,B,2025-09-13,13:30,45,20,Chapter 2 - Applications
+62,English Quiz - Chapter 1,English,Grade 10,B,2025-09-09,12:00,45,25,Chapter 1 - Advanced
+63,Social Studies Quiz - Chapter 2,Social Studies,Grade 10,B,2025-09-10,10:00,60,30,Chapter 3 - Advanced
+64,Hindi Quiz - Chapter 6,Hindi,Grade 10,B,2025-09-18,14:00,60,25,Chapter 3 - Problem Solving
+65,Computer Science Quiz - Chapter 2,Computer Science,Grade 10,B,2025-09-13,9:30,30,35,Chapter 3 - Advanced
+66,Mathematics Quiz - Chapter 5,Mathematics,Grade 10,C,2025-09-18,13:00,60,35,Chapter 2 - Advanced
+67,Science Quiz - Chapter 3,Science,Grade 10,C,2025-09-06,10:00,45,30,Chapter 1 - Advanced
+68,English Quiz - Chapter 1,English,Grade 10,C,2025-09-07,12:00,60,35,Chapter 4 - Advanced
+69,Hindi Quiz - Chapter 5,Hindi,Grade 10,C,2025-09-09,14:30,30,25,Chapter 4 - Advanced
+70,Computer Science Quiz - Chapter 7,Computer Science,Grade 10,C,2025-09-11,11:00,60,35,Chapter 2 - Applications

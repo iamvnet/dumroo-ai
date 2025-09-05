@@ -1,0 +1,22 @@
+admin_id,username,email,full_name,role,assigned_grades,assigned_sections,assigned_regions,permissions,created_date
+1,super_admin,super.admin@dumroo.edu,Super Administrator,super_admin,ALL,ALL,ALL,"['read_all', 'write_all', 'delete_all']",2024-01-01
+2,priya_sharma,priya.sharma@dumroo.edu,Priya Sharma,grade_coordinator,Grade 6,ALL,North Delhi,"['read_students', 'read_performance', 'write_homework', 'write_quiz']",2024-01-15
+3,rajesh_kumar,rajesh.kumar@dumroo.edu,Rajesh Kumar,grade_coordinator,Grade 7,ALL,South Delhi,"['read_students', 'read_performance', 'write_homework', 'write_quiz']",2024-01-15
+4,anjali_gupta,anjali.gupta@dumroo.edu,Anjali Gupta,grade_coordinator,Grade 8,ALL,East Delhi,"['read_students', 'read_performance', 'write_homework', 'write_quiz']",2024-01-15
+5,vikram_singh,vikram.singh@dumroo.edu,Vikram Singh,grade_coordinator,Grade 9,ALL,West Delhi,"['read_students', 'read_performance', 'write_homework', 'write_quiz']",2024-01-15
+6,sunita_verma,sunita.verma@dumroo.edu,Sunita Verma,grade_coordinator,Grade 10,ALL,Central Delhi,"['read_students', 'read_performance', 'write_homework', 'write_quiz']",2024-01-15
+7,teacher_grade6a,teacher.grade6a@dumroo.edu,Ishaan Kumar,section_teacher,Grade 6,A,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+8,teacher_grade6b,teacher.grade6b@dumroo.edu,Kavya Gupta,section_teacher,Grade 6,B,North Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+9,teacher_grade6c,teacher.grade6c@dumroo.edu,Kavya Agarwal,section_teacher,Grade 6,C,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+10,teacher_grade7a,teacher.grade7a@dumroo.edu,Anaya Agarwal,section_teacher,Grade 7,A,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+11,teacher_grade7b,teacher.grade7b@dumroo.edu,Khushi Verma,section_teacher,Grade 7,B,South Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+12,teacher_grade7c,teacher.grade7c@dumroo.edu,Riya Singh,section_teacher,Grade 7,C,North Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+13,teacher_grade8a,teacher.grade8a@dumroo.edu,Vihaan Bansal,section_teacher,Grade 8,A,Central Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+14,teacher_grade8b,teacher.grade8b@dumroo.edu,Shaurya Saxena,section_teacher,Grade 8,B,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+15,teacher_grade8c,teacher.grade8c@dumroo.edu,Ishaan Gupta,section_teacher,Grade 8,C,South Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+16,teacher_grade9a,teacher.grade9a@dumroo.edu,Riya Singh,section_teacher,Grade 9,A,South Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+17,teacher_grade9b,teacher.grade9b@dumroo.edu,Khushi Saxena,section_teacher,Grade 9,B,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+18,teacher_grade9c,teacher.grade9c@dumroo.edu,Riya Bansal,section_teacher,Grade 9,C,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+19,teacher_grade10a,teacher.grade10a@dumroo.edu,Arjun Bansal,section_teacher,Grade 10,A,Central Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+20,teacher_grade10b,teacher.grade10b@dumroo.edu,Pihu Singh,section_teacher,Grade 10,B,North Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
+21,teacher_grade10c,teacher.grade10c@dumroo.edu,Ishaan Saxena,section_teacher,Grade 10,C,East Delhi,"['read_students', 'read_performance', 'write_homework']",2024-02-01
