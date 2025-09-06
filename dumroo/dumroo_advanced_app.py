@@ -45,6 +45,9 @@ class AdvancedDumrooNL2SQL:
             st.warning("⚠️ Gemini API key not found. Please set GEMINI_API_KEY in your environment.")
             return
 
+        # Always setup basic queries as fallback
+        self.setup_basic_queries()
+        
         if LANGCHAIN_AVAILABLE:
             self.setup_langchain()
         else:
@@ -64,12 +67,23 @@ class AdvancedDumrooNL2SQL:
     def setup_langchain(self):
         """Setup LangChain components"""
         try:
-            # Initialize LLM
-            self.llm = ChatGoogleGenerativeAI(
-                model="gemini-pro",
-                temperature=0,
-                google_api_key=self.api_key
-            )
+            # Initialize LLM - try multiple model names
+            model_names = ["gemini-2.5-flash", "gemini-2.5-pro", "gemini-pro"]
+            
+            for model_name in model_names:
+                try:
+                    self.llm = ChatGoogleGenerativeAI(
+                        model=model_name,
+                        temperature=0,
+                        google_api_key=self.api_key
+                    )
+                    print(f"✅ Successfully initialized with model: {model_name}")
+                    break
+                except Exception as e:
+                    print(f"⚠️ Failed to initialize {model_name}: {str(e)[:100]}...")
+                    continue
+            else:
+                raise Exception("Failed to initialize any Gemini model")
 
             # Setup SQL Database
             self.sql_database = SQLDatabase.from_uri(f"sqlite:///{self.db_path}")
@@ -96,9 +110,25 @@ class AdvancedDumrooNL2SQL:
             try:
                 import google.generativeai as genai
                 genai.configure(api_key=self.api_key)
-                self.basic_model = genai.GenerativeModel('gemini-pro')
-                self.has_genai = True
-                print("✅ Google Generative AI available for basic implementation")
+                
+                # Try multiple model names
+                model_names = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"]
+                for model_name in model_names:
+                    try:
+                        self.basic_model = genai.GenerativeModel(model_name)
+                        # Test the model with a simple request
+                        test_response = self.basic_model.generate_content("Hello")
+                        print(f"✅ Google Generative AI available with model: {model_name}")
+                        self.has_genai = True
+                        break
+                    except Exception as e:
+                        print(f"⚠️ Model {model_name} failed: {str(e)[:50]}...")
+                        continue
+                else:
+                    print("⚠️ No working Gemini models found")
+                    self.basic_model = None
+                    self.has_genai = False
+                    
             except ImportError:
                 self.basic_model = None
                 self.has_genai = False
@@ -119,9 +149,15 @@ class AdvancedDumrooNL2SQL:
             # Don't raise - we can still work with predefined queries
             self.basic_model = None
             self.has_genai = False
-            self.basic_queries = {
-                "homework": "SELECT DISTINCT s.student_name, s.grade, s.section, h.title as homework_title, h.due_date, h.subject FROM students s JOIN submissions sub ON s.student_id = sub.student_id JOIN homework h ON sub.homework_id = h.homework_id WHERE sub.is_submitted = 0"
-            }
+
+    def setup_basic_queries(self):
+        """Setup basic query templates (always available)"""
+        self.basic_queries = {
+            "homework": "SELECT DISTINCT s.student_name, s.grade, s.section, h.title as homework_title, h.due_date, h.subject FROM students s JOIN submissions sub ON s.student_id = sub.student_id JOIN homework h ON sub.homework_id = h.homework_id WHERE sub.is_submitted = 0",
+            "performance": "SELECT s.student_name, s.grade, s.section, p.subject, p.assessment_type, p.assessment_date, p.percentage FROM performance p JOIN students s ON p.student_id = s.student_id",
+            "attendance": "SELECT s.student_name, s.grade, s.section, s.attendance_percentage FROM students s WHERE s.attendance_percentage < 80",
+            "quizzes": "SELECT q.quiz_title, q.subject, q.grade, q.section, q.scheduled_date, q.scheduled_time FROM quizzes q"
+        }
 
     def setup_custom_prompt(self):
         """Setup domain-specific prompt template"""
@@ -133,20 +169,31 @@ class AdvancedDumrooNL2SQL:
         Database Schema:
         {table_info}
 
-        Important Guidelines:
-        1. Current date context: Use date('now') for current date comparisons
-        2. For "last week" queries, use: date('now', '-7 days')
-        3. For "next week" queries, use: date('now', '+7 days') 
-        4. Always use proper table aliases (s for students, h for homework, etc.)
-        5. Include proper JOIN conditions when querying multiple tables
-        6. For homework submissions: is_submitted = 0 means not submitted
-        7. For attendance: values are percentages (0-100)
-        8. Grades are: 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'
-        9. Sections are: 'A', 'B', 'C'
+        CRITICAL SCHEMA RULES:
+        1. students table: student_id, student_name, grade, section, region, attendance_percentage
+        2. homework table: homework_id, title, subject, grade, section, assigned_date, due_date, total_marks  
+        3. submissions table: submission_id, homework_id, student_id, submitted_date, is_submitted, is_late, marks_obtained, total_marks
+        4. performance table: performance_id, student_id, subject, assessment_type, assessment_date, marks_obtained, total_marks, percentage, grade_letter
+        5. quizzes table: quiz_id, quiz_title, subject, grade, section, scheduled_date, scheduled_time, duration_minutes, total_marks
+
+        IMPORTANT GUIDELINES:
+        1. ALWAYS use table aliases: s for students, h for homework, sub for submissions, p for performance, q for quizzes
+        2. When referencing grade/section in WHERE clauses, ALWAYS specify table alias (e.g., s.grade, h.grade)
+        3. performance table does NOT have grade/section/region - JOIN with students table to get these
+        4. For homework submissions: is_submitted = 0 means not submitted, is_submitted = 1 means submitted
+        5. For unsubmitted homework: LEFT JOIN submissions and check WHERE sub.submission_id IS NULL
+        6. Current date: Use date('now') for current date comparisons
+        7. Grades format: 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'
+        8. Sections: 'A', 'B', 'C'
+        9. Regions: 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi', 'Central Delhi'
+
+        COMMON QUERY PATTERNS:
+        - Unsubmitted homework: SELECT s.student_name FROM students s JOIN homework h ON s.grade = h.grade AND s.section = h.section LEFT JOIN submissions sub ON s.student_id = sub.student_id AND h.homework_id = sub.homework_id WHERE sub.submission_id IS NULL
+        - Performance by grade: SELECT s.grade, p.subject, AVG(p.percentage) FROM performance p JOIN students s ON p.student_id = s.student_id GROUP BY s.grade, p.subject
 
         User Question: {input}
 
-        Generate ONLY the SQL query, no explanation:"""
+        Generate ONLY the SQL query without any markdown formatting, explanations, or code blocks. Return just the raw SQL:"""
 
         self.custom_prompt = PromptTemplate(
             input_variables=["table_info", "input"],
@@ -174,36 +221,63 @@ class AdvancedDumrooNL2SQL:
         if not permissions or permissions['role'] == 'super_admin':
             return sql_query
 
-        # Build filter conditions
+        # Build filter conditions with proper table aliases
         conditions = []
 
         if permissions['assigned_grades'] != 'ALL':
             grades = [f"'{grade.strip()}'" for grade in permissions['assigned_grades'].split(',')]
-            conditions.append(f"grade IN ({','.join(grades)})")
+            # Always use s.grade to avoid ambiguity
+            conditions.append(f"s.grade IN ({','.join(grades)})")
 
         if permissions['assigned_sections'] != 'ALL':
             sections = [f"'{section.strip()}'" for section in permissions['assigned_sections'].split(',')]
-            conditions.append(f"section IN ({','.join(sections)})")
+            # Always use s.section to avoid ambiguity
+            conditions.append(f"s.section IN ({','.join(sections)})")
 
         if permissions['assigned_regions'] != 'ALL':
             regions = [f"'{region.strip()}'" for region in permissions['assigned_regions'].split(',')]
-            conditions.append(f"region IN ({','.join(regions)})")
+            # Always use s.region to avoid ambiguity
+            conditions.append(f"s.region IN ({','.join(regions)})")
 
         # Apply filters to the query
         if conditions:
             filter_clause = " AND ".join(conditions)
 
-            # Simple approach: add WHERE clause or extend existing WHERE
-            if "WHERE" in sql_query.upper():
-                # Find the first WHERE and add our conditions
-                sql_query = sql_query.replace(
-                    "WHERE", f"WHERE ({filter_clause}) AND", 1
-                )
+            # More robust approach: handle different query structures
+            sql_upper = sql_query.upper()
+            
+            if "WHERE" in sql_upper:
+                # Find the WHERE clause and add our conditions
+                where_pos = sql_upper.find("WHERE")
+                before_where = sql_query[:where_pos + 5]  # Include "WHERE"
+                after_where = sql_query[where_pos + 5:]
+                sql_query = f"{before_where} ({filter_clause}) AND {after_where}"
             else:
-                # Find FROM students and add WHERE clause
-                sql_query = sql_query.replace(
-                    "FROM students", f"FROM students WHERE {filter_clause}"
-                )
+                # Find a good place to add WHERE clause
+                # Look for FROM students table (with or without alias)
+                if "FROM students" in sql_query.lower():
+                    # Find the position after FROM students or FROM students s
+                    import re
+                    pattern = r'(FROM\s+students\s*(?:s\s*)?)'
+                    match = re.search(pattern, sql_query, re.IGNORECASE)
+                    if match:
+                        end_pos = match.end()
+                        before_from = sql_query[:end_pos]
+                        after_from = sql_query[end_pos:]
+                        sql_query = f"{before_from} WHERE {filter_clause} {after_from}"
+                else:
+                    # Fallback: add WHERE clause before any ORDER BY, GROUP BY, etc.
+                    keywords = ['ORDER BY', 'GROUP BY', 'HAVING', 'LIMIT']
+                    insert_pos = len(sql_query)
+                    
+                    for keyword in keywords:
+                        pos = sql_query.upper().find(keyword)
+                        if pos != -1 and pos < insert_pos:
+                            insert_pos = pos
+                    
+                    before = sql_query[:insert_pos].rstrip()
+                    after = sql_query[insert_pos:]
+                    sql_query = f"{before} WHERE {filter_clause} {after}"
 
         return sql_query
 
@@ -245,9 +319,39 @@ class AdvancedDumrooNL2SQL:
         # Parse result into DataFrame if possible
         try:
             conn = sqlite3.connect(self.db_path)
-            result_df = pd.read_sql_query(secured_query, conn)
+            # Clean the SQL query - remove LangChain formatting
+            clean_query = secured_query
+            
+            # Remove "SQLQuery:" prefix
+            if "SQLQuery:" in clean_query:
+                clean_query = clean_query.split("SQLQuery:")[-1].strip()
+            
+            # Remove markdown code blocks (```sqlite ... ```)
+            if "```" in clean_query:
+                # Extract SQL from between code blocks
+                lines = clean_query.split('\n')
+                sql_lines = []
+                in_code_block = False
+                
+                for line in lines:
+                    if line.strip().startswith('```'):
+                        in_code_block = not in_code_block
+                        continue
+                    if in_code_block or (not any(line.strip().startswith(x) for x in ['```', 'SQLQuery:']) and line.strip()):
+                        sql_lines.append(line)
+                
+                clean_query = '\n'.join(sql_lines).strip()
+            
+            # Final cleanup - remove any remaining prefixes
+            clean_query = clean_query.strip()
+            
+            result_df = pd.read_sql_query(clean_query, conn)
             conn.close()
-        except:
+            print(f"✅ Query executed successfully: {len(result_df)} rows returned")
+        except Exception as e:
+            print(f"❌ Error executing query: {e}")
+            print(f"   Original query: {secured_query}")
+            print(f"   Cleaned query: {clean_query}")
             result_df = pd.DataFrame()  # Empty DataFrame on error
 
         return {
